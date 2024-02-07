@@ -4,12 +4,12 @@ project.lock.json
 .DS_Store
 *.pyc
 nupkg/
+<AndroidSdkPath>/
+<JavaSdkPath>/
 
 # Visual Studio Code
 .vscode
 
-# Rider
-.idea
 
 # User-specific files
 *.suo
@@ -32,6 +32,3 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
-
-# Visual Studio 2015
-.vs/
