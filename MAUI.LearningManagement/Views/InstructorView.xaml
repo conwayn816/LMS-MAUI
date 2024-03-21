@@ -8,7 +8,15 @@
     <VerticalStackLayout>
         <ListView
             ItemsSource="{Binding Students}">
-
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
     </VerticalStackLayout>
