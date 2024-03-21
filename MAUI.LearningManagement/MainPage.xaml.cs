@@ -10,12 +10,12 @@ public partial class MainPage : ContentPage
 
 	private void InstructorClicked(object sender, EventArgs e)
 	{
-		Shell.Current.GoToAsync("//instructor");
+		Shell.Current.GoToAsync("//Instructor");
 	}
 
 	private void StudentClicked(object sender, EventArgs e)
 	{
-		Shell.Current.GoToAsync("//student");
+		Shell.Current.GoToAsync("//Student");
 	}
 
 }
