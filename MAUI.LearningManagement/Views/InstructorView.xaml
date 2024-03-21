@@ -6,6 +6,10 @@
 
 
     <VerticalStackLayout>
+        <ListView
+            ItemsSource="{Binding Students}">
+
+        </ListView>
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
     </VerticalStackLayout>
 
