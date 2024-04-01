@@ -1,19 +1,32 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using LMS.Services;
 using LMS.Models;
-using System.Collections.ObjectModel;
+
 
 namespace MAUI.LearningManagement.ViewModels
 {
-    public class InstructorViewViewModel
+    public class InstructorViewViewModel : INotifyPropertyChanged
     {
+        private StudentService studentService;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         private Student? Student;
 
-        public Student? student 
+        public Student? student
         {
             get
             {
@@ -28,7 +41,13 @@ namespace MAUI.LearningManagement.ViewModels
                 return new ObservableCollection<Student>(studentService.Students);
             }
         }
-        private StudentService studentService;
+
+        public void AddStudent()
+        {
+            studentService.Add(new Student { Name = "New Student" });
+            NotifyPropertyChanged(nameof(Students));
+        }
+
 
         public InstructorViewViewModel()
         {

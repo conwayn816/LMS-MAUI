@@ -6,6 +6,8 @@
 
 
     <VerticalStackLayout>
+        <Button Text="Add Student" Clicked="AddStudentClicked" />
+        <Label Text="Student List" VerticalOptions="Center" HorizontalOptions="Center"/>
         <ListView
             ItemsSource="{Binding Students}">
             <ListView.ItemTemplate>
