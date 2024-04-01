@@ -46,6 +46,21 @@ namespace MAUI.LearningManagement.ViewModels
             }
         }
 
+        public Student? SelectedStudent
+        {
+            get; set;
+        }
+
+        public void Remove()
+        {
+            if (SelectedStudent == null)
+            {
+                return;
+            }
+            studentService.Remove(SelectedStudent);
+            Refresh();
+        }
+
         public void Refresh()
         {
             NotifyPropertyChanged(nameof(Students));

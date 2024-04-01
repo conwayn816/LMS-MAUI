@@ -8,10 +8,10 @@
 
 
     <VerticalStackLayout>
-        <Button Text="Add Student" Clicked="AddStudentClicked" />
         <Label Text="Student List" VerticalOptions="Center" HorizontalOptions="Center"/>
         <ListView
-            ItemsSource="{Binding Students}">
+            ItemsSource="{Binding Students}"
+            SelectedItem="{Binding SelectedStudent}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -22,6 +22,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Text="Add Student" Clicked="AddStudentClicked" />
+        <Button Text="Remove Student" Clicked="RemoveStudentClicked" />
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
     </VerticalStackLayout>
 

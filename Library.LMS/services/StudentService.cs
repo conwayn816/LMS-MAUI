@@ -61,5 +61,10 @@ namespace LMS.Services
             students.Add(student);
         }
 
+        public void Remove(Student student)
+        {
+            students.Remove(student);
+        }
+
     }
 }
