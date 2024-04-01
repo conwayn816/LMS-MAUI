@@ -102,6 +102,7 @@ namespace MAUI.LearningManagement.ViewModels
         public void Refresh()
         {
             NotifyPropertyChanged(nameof(Students));
+            NotifyPropertyChanged(nameof(Courses));
         }   
     }
 }

@@ -4,7 +4,7 @@
              x:Class="MAUI.LearningManagement.Dialogs.StudentDialog"
              Title="StudentDialog"
              NavigatedTo="ContentPage_NavigatedTo">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="10">
         <Label
             Text="New Student"
             VerticalOptions="Center"

@@ -11,8 +11,8 @@ public partial class CourseDialog : ContentPage
 
     private void SaveClicked(object sender, EventArgs e)
     {
-        //(BindingContext as StudentDialogViewModel)?.AddStudent();
-        //Shell.Current.GoToAsync("//Instructor");
+        (BindingContext as CourseDialogViewModel)?.AddCourse();
+        Shell.Current.GoToAsync("//Instructor");
     }
 
     private void CancelClicked(object sender, EventArgs e)
@@ -22,6 +22,6 @@ public partial class CourseDialog : ContentPage
 
     private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
     {
-        //BindingContext = new StudentDialogViewModel();
+        BindingContext = new CourseDialogViewModel();
     }
 }

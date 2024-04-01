@@ -34,7 +34,7 @@ namespace LMS.Services
         }
 
         //returns list of courses (uses query if applicable)
-        public IList<Course> Courses
+        public List<Course> Courses
         {
             get
             {
