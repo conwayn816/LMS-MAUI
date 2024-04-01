@@ -7,24 +7,26 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+                <Label
+                    Text="Welcome to the Learning Management System"
+                    FontSize="Title"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
             <Grid>
-                <Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions Padding="10">
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label
-                    Text="Welcome to Learning Management"
-                    FontSize="Title"
-                    Grid.Column="0"
-                    HorizontalOptions="Start" />
                 <Button
                     Text="I am a student"
                     Grid.Column="0" 
-                    Clicked="StudentClicked" />
+                    Clicked="StudentClicked"
+                    Margin="0,0,10,0" />
                 <Button
                     Text="I am an instructor"
                     Grid.Column="1"
-                    Clicked = "InstructorClicked" />
+                    Clicked = "InstructorClicked" 
+                    Margin="10,0,0,0" />
             </Grid>
         </VerticalStackLayout>
     </ScrollView>
