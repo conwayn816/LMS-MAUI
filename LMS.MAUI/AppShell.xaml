@@ -4,6 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MAUI.LearningManagement"
+    xmlns:views="clr-namespace:MAUI.LearningManagement.Views"
+    xmlns:dialogs="clr-namespace:MAUI.LearningManagement.Dialogs"
     Shell.FlyoutBehavior="Disabled"
     Title="MAUI.LearningManagement">
 
@@ -11,5 +13,19 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Instructor View"
+        ContentTemplate="{DataTemplate views:InstructorView}"
+        Route="Instructor"/>
+    <ShellContent
+        Title="Student View"
+        ContentTemplate="{DataTemplate views:StudentView}"
+        Route="Student"/>
+    <ShellContent
+        Title="Student Details"
+        ContentTemplate="{DataTemplate dialogs:StudentDialog}"
+        Route="StudentDetail"/>
+    
 
 </Shell>
