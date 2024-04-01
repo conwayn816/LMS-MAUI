@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI.LearningManagement.Dialogs.StudentDialog"
-             Title="StudentDialog">
+             Title="StudentDialog"
+             NavigatedTo="ContentPage_NavigatedTo">
     <VerticalStackLayout>
         <Label
             Text="New Student"
@@ -19,8 +20,11 @@
             </Grid.ColumnDefinitions>
 
             <Label Text="ID" Grid.Row="0" Grid.Column="0" />
+            <Entry Text="{Binding Id}" Grid.Row="0" Grid.Column="1" />
             <Label Text="Name" Grid.Row="1" Grid.Column="0" />
+            <Entry Text="{Binding Name}" Grid.Row="1" Grid.Column="1" />
         </Grid>
+        <Button Text="Save" Clicked="SaveClicked" />
         <Button Text="Cancel" Clicked="CancelClicked" />
     </VerticalStackLayout>
 </ContentPage>

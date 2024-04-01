@@ -7,11 +7,21 @@ public partial class StudentDialog : ContentPage
     public StudentDialog()
     {
         InitializeComponent();
-        BindingContext = new StudentDialogViewModel();
+    }
+
+    private void SaveClicked(object sender, EventArgs e)
+    {
+        (BindingContext as StudentDialogViewModel)?.AddStudent();
+        Shell.Current.GoToAsync("//Instructor");
     }
     
     private void CancelClicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync("//Instructor");
+    }
+
+    private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
+    {
+        BindingContext = new StudentDialogViewModel();
     }
 }

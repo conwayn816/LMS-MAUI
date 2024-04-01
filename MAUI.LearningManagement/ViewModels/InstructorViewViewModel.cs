@@ -18,7 +18,6 @@ namespace MAUI.LearningManagement.ViewModels
         public InstructorViewViewModel()
         {
             studentService = StudentService.Current;
-            Student = studentService.Students.FirstOrDefault();
         }
         private StudentService studentService;
 
@@ -46,12 +45,10 @@ namespace MAUI.LearningManagement.ViewModels
                 return new ObservableCollection<Student>(studentService.Students);
             }
         }
-        
-        /*public void AddStudent()
-        {
-            studentService.Add(new Student { Name = "New Student" });
-            NotifyPropertyChanged(nameof(Students));
-        }*/
-    }
 
+        public void Refresh()
+        {
+            NotifyPropertyChanged(nameof(Students));
+        }   
+    }
 }
