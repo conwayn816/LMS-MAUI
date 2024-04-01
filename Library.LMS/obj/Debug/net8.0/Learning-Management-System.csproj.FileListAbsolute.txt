@@ -1,0 +1,30 @@
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/bin/Debug/net8.0/Learning-Management-System
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/bin/Debug/net8.0/Learning-Management-System.deps.json
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/bin/Debug/net8.0/Learning-Management-System.runtimeconfig.json
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/bin/Debug/net8.0/Learning-Management-System.dll
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/bin/Debug/net8.0/Learning-Management-System.pdb
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/Learning-Management-System.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/Learning-Management-System.AssemblyInfoInputs.cache
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/Learning-Management-System.AssemblyInfo.cs
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/Learning-Management-System.csproj.CoreCompileInputs.cache
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/Learning-Management-System.sourcelink.json
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/Learning-Management-System.dll
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/refint/Learning-Management-System.dll
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/Learning-Management-System.pdb
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/Learning-Management-System.genruntimeconfig.cache
+/Users/nathanconway/Desktop/COP 4870/Console App v1/Learning-Management-System/Learning-Management-System/obj/Debug/net8.0/ref/Learning-Management-System.dll
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/bin/Debug/net8.0/Learning-Management-System
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/bin/Debug/net8.0/Learning-Management-System.deps.json
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/bin/Debug/net8.0/Learning-Management-System.runtimeconfig.json
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/bin/Debug/net8.0/Learning-Management-System.dll
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/bin/Debug/net8.0/Learning-Management-System.pdb
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Learning-Management-System.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Learning-Management-System.AssemblyInfoInputs.cache
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Learning-Management-System.AssemblyInfo.cs
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Learning-Management-System.csproj.CoreCompileInputs.cache
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Learning-Management-System.sourcelink.json
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Learning-Management-System.dll
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/refint/Learning-Management-System.dll
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Learning-Management-System.pdb
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Learning-Management-System.genruntimeconfig.cache
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/ref/Learning-Management-System.dll

@@ -1,0 +1,12 @@
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/bin/Debug/net8.0/Library.LMS.deps.json
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/bin/Debug/net8.0/Library.LMS.dll
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/bin/Debug/net8.0/Library.LMS.pdb
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Library.LMS.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Library.LMS.AssemblyInfoInputs.cache
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Library.LMS.AssemblyInfo.cs
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Library.LMS.csproj.CoreCompileInputs.cache
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Library.LMS.sourcelink.json
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Library.LMS.dll
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/refint/Library.LMS.dll
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/Library.LMS.pdb
+/Users/nathanconway/Desktop/COP4870/LMS-MAUI/Library.LMS/obj/Debug/net8.0/ref/Library.LMS.dll
