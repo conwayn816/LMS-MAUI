@@ -17,9 +17,11 @@ namespace MAUI.LearningManagement.ViewModels
     {
         public InstructorViewViewModel()
         {
-            studentService = StudentService.Current;
+            studentSvc = StudentService.Current;
+            courseSvc = CourseService.Current;
         }
-        private StudentService studentService;
+        private StudentService studentSvc;
+        private CourseService courseSvc;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -28,6 +30,8 @@ namespace MAUI.LearningManagement.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+
+        //STUDENTS
         private Student? Student;
 
         public Student? student
@@ -42,7 +46,7 @@ namespace MAUI.LearningManagement.ViewModels
         {
             get
             {
-                return new ObservableCollection<Student>(studentService.Students);
+                return new ObservableCollection<Student>(studentSvc.Students);
             }
         }
 
@@ -51,13 +55,47 @@ namespace MAUI.LearningManagement.ViewModels
             get; set;
         }
 
-        public void Remove()
+        public void RemoveStudent()
         {
             if (SelectedStudent == null)
             {
                 return;
             }
-            studentService.Remove(SelectedStudent);
+            studentSvc.Remove(SelectedStudent);
+            Refresh();
+        }
+
+        //COURSES
+        private Course? Course;
+
+        public Course? course
+        {
+            get
+            {
+                return Course;
+            }
+        }
+
+        public Course? SelectedCourse
+        {
+            get; set;
+        }
+
+        public ObservableCollection<Course> Courses
+        {
+            get
+            {
+                return new ObservableCollection<Course>(courseSvc.Courses);
+            }
+        }
+
+        public void RemoveCourse()
+        {
+            if (SelectedCourse == null)
+            {
+                return;
+            }
+            courseSvc.Remove(SelectedCourse);
             Refresh();
         }
 

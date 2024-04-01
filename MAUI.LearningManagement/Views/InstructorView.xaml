@@ -24,6 +24,24 @@
         </ListView>
         <Button Text="Add Student" Clicked="AddStudentClicked" />
         <Button Text="Remove Student" Clicked="RemoveStudentClicked" />
+
+        <Label Text="Course List" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <ListView
+            ItemsSource="{Binding Courses}"
+            SelectedItem="{Binding SelectedCourse}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add Course" Clicked="AddCourseClicked" />
+        <Button Text="Remove Course" Clicked="RemoveCourseClicked" />
+
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
     </VerticalStackLayout>
 
