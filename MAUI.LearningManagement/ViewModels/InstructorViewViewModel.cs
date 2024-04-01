@@ -7,14 +7,19 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using LMS.Services;
 using LMS.Models;
+using LMS.Services;
 
 
 namespace MAUI.LearningManagement.ViewModels
 {
     public class InstructorViewViewModel : INotifyPropertyChanged
     {
+        public InstructorViewViewModel()
+        {
+            studentService = StudentService.Current;
+            Student = studentService.Students.FirstOrDefault();
+        }
         private StudentService studentService;
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -41,18 +46,12 @@ namespace MAUI.LearningManagement.ViewModels
                 return new ObservableCollection<Student>(studentService.Students);
             }
         }
-
-        public void AddStudent()
+        
+        /*public void AddStudent()
         {
             studentService.Add(new Student { Name = "New Student" });
             NotifyPropertyChanged(nameof(Students));
-        }
-
-
-        public InstructorViewViewModel()
-        {
-            studentService = StudentService.Current;
-        }
+        }*/
     }
 
 }

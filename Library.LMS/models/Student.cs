@@ -9,8 +9,8 @@ namespace LMS.Models
 
         public Student()
         {
-            //Name = "";
-            //Grades = new Dictionary<Guid, double>();
+            Name = "";
+            Grades = new Dictionary<Guid, double>();
         }
 
         public override string ToString()

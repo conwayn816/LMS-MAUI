@@ -18,7 +18,8 @@ public partial class InstructorView : ContentPage
 
     private void AddStudentClicked(object sender, EventArgs e)
     {
-        (BindingContext as InstructorViewViewModel)?.AddStudent();
+        Shell.Current.GoToAsync("//StudentDetail");
+        //(BindingContext as InstructorViewViewModel)?.AddStudent();
     }
 
 }

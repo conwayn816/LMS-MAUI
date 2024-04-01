@@ -41,7 +41,7 @@ namespace LMS.Services
         //default contructor only used in current
         private StudentService()
         {
-            //query = string.Empty;
+            query = string.Empty;
             students = new List<Student>() {
                 new Student{Name = "John Doe"},
                 new Student{Name = "Jane Doe"},
