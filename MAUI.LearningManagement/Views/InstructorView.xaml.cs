@@ -30,7 +30,7 @@ public partial class InstructorView : ContentPage
     //COURSES
     private void AddCourseClicked(object sender, EventArgs e)
     {
-        //Shell.Current.GoToAsync("//CourseDetail");
+        Shell.Current.GoToAsync("//CourseDetail");
     }
 
     private void RemoveCourseClicked(object sender, EventArgs e)
