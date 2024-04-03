@@ -54,6 +54,8 @@ namespace MAUI.LearningManagement.ViewModels
                     student.Classification = StudentClassifcation.Junior;
                 else if (ClassificationString == "S")
                     student.Classification = StudentClassifcation.Senior;
+                else
+                    student.Classification = StudentClassifcation.Freshman;
             }
         }   
     }
