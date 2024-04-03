@@ -23,19 +23,10 @@ public partial class InstructorView : ContentPage
     }
 
     //COURSES
-    private void AddCourseClicked(object sender, EventArgs e)
-    {
-        Shell.Current.GoToAsync("//CourseDetail");
-    }
 
-    private void RemoveCourseClicked(object sender, EventArgs e)
+    private void CourseManagementClicked(object sender, EventArgs e)
     {
-        (BindingContext as InstructorViewViewModel)?.RemoveCourse();
-    }
-
-    private void ContentPage_NavigatedTo(object sender, EventArgs e)
-    {
-        (BindingContext as InstructorViewViewModel)?.Refresh();
+        Shell.Current.GoToAsync("//CourseManagement");
     }
 
 }

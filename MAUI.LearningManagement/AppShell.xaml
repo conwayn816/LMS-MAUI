@@ -23,6 +23,10 @@
         ContentTemplate="{DataTemplate views:StudentManagementView}"
         Route="StudentManagement"/>
     <ShellContent
+        Title="Course Management"
+        ContentTemplate="{DataTemplate views:CourseManagementView}"
+        Route="CourseManagement"/>
+    <ShellContent
         Title="Student View"
         ContentTemplate="{DataTemplate views:StudentView}"
         Route="Student"/>

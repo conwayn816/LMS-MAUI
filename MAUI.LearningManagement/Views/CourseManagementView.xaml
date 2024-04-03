@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.LearningManagement.Views.CourseManagementView"
+             Title="CourseManagementView"
+             NavigatedTo="ContentPage_NavigatedTo"
+             >
+
+    <VerticalStackLayout Spacing="10">
+        <Label Text="Welcome to Course Management" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+        <Label Text="Course List" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <ListView
+            ItemsSource="{Binding Courses}"
+            SelectedItem="{Binding SelectedCourse}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add Course" Clicked="AddCourseClicked" />
+        <Button Text="Remove Course" Clicked="RemoveCourseClicked" />
+
+        <Button Text="Go Back Home" Clicked="GoBackClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>

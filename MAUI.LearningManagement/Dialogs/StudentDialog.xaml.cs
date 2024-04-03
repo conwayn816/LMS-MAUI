@@ -12,12 +12,12 @@ public partial class StudentDialog : ContentPage
     private void SaveClicked(object sender, EventArgs e)
     {
         (BindingContext as StudentDialogViewModel)?.AddStudent();
-        Shell.Current.GoToAsync("//Instructor");
+        Shell.Current.GoToAsync("//StudentManagement");
     }
     
     private void CancelClicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Instructor");
+        Shell.Current.GoToAsync("//StudentManagement");
     }
 
     private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)

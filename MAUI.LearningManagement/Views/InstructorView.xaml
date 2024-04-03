@@ -3,31 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI.LearningManagement.Views.InstructorView"
              Title="InstructorView"
-             NavigatedTo="ContentPage_NavigatedTo"
              >
 
 
     <VerticalStackLayout Spacing="10">
         <Label Text="Welcome to the Instructor View" VerticalOptions="Center" HorizontalOptions="Center"/>
         <Button Text="Student Management" Clicked="StudentManagementClicked" />
-
-        <Label Text="Course List" VerticalOptions="Center" HorizontalOptions="Center"/>
-        <ListView
-            ItemsSource="{Binding Courses}"
-            SelectedItem="{Binding SelectedCourse}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding}" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <Button Text="Add Course" Clicked="AddCourseClicked" />
-        <Button Text="Remove Course" Clicked="RemoveCourseClicked" />
-
+        <Button Text="Course Management" Clicked="CourseManagementClicked" />
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
     </VerticalStackLayout>
 

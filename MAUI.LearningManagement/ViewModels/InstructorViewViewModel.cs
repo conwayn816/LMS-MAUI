@@ -16,55 +16,13 @@ namespace MAUI.LearningManagement.ViewModels
     public class InstructorViewViewModel : INotifyPropertyChanged
     {
         public InstructorViewViewModel()
-        {
-            courseSvc = CourseService.Current;
-        }
-        private CourseService courseSvc;
-
+        {}
+    
         public event PropertyChangedEventHandler? PropertyChanged;
 
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        //COURSES
-        private Course? Course;
-
-        public Course? course
-        {
-            get
-            {
-                return Course;
-            }
-        }
-
-        public Course? SelectedCourse
-        {
-            get; set;
-        }
-
-        public ObservableCollection<Course> Courses
-        {
-            get
-            {
-                return new ObservableCollection<Course>(courseSvc.Courses);
-            }
-        }
-
-        public void RemoveCourse()
-        {
-            if (SelectedCourse == null)
-            {
-                return;
-            }
-            courseSvc.Remove(SelectedCourse);
-            Refresh();
-        }
-
-        public void Refresh()
-        {
-            NotifyPropertyChanged(nameof(Courses));
-        }   
+        } 
     }
 }
