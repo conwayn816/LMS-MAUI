@@ -56,9 +56,18 @@ namespace LMS.Services
         }
 
         //adds course from frontend to the list
-        public void Add(Course course)
+        public void AddOrUpdateCourse(Course course)
         {
-            courses.Add(course);
+            var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
+            if (existingCourse == null)
+            {
+                courses.Add(course);
+            }
+            else
+            {
+                var index = courses.IndexOf(existingCourse);
+                courses[index] = course;
+            }
         }
 
         public void Remove(Course course)

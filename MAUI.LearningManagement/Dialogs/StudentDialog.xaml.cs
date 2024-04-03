@@ -1,13 +1,14 @@
 using MAUI.LearningManagement.ViewModels;
+using LMS.Models;
 
 namespace MAUI.LearningManagement.Dialogs;
 
 public partial class StudentDialog : ContentPage
 {
-    public StudentDialog()
+    public StudentDialog(Student studentToEdit = null)
     {
         InitializeComponent();
-        BindingContext = new StudentDialogViewModel();
+        BindingContext = new StudentDialogViewModel(studentToEdit);
     }
 
     private void SaveClicked(object sender, EventArgs e)

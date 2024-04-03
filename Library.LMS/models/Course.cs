@@ -1,5 +1,6 @@
 namespace LMS.Models {
     public class Course {
+        public Guid guid { get; set; }
         public string Code { get; set; }  
         public string Name { get; set; }
         public string Description { get; set; }
@@ -8,6 +9,7 @@ namespace LMS.Models {
         public List<Module> Modules { get; set; }
 
         public Course() {
+            guid = Guid.NewGuid();
             Code = "";
             Name = "";
             Description = "";

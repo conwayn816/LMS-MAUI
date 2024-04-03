@@ -24,8 +24,8 @@
             </ListView.ItemTemplate>
         </ListView>
         <Button Text="Add Course" Clicked="AddCourseClicked" />
+        <Button Text="Edit Course" Clicked="EditCourseClicked" />
         <Button Text="Remove Course" Clicked="RemoveCourseClicked" />
-
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
     </VerticalStackLayout>
 

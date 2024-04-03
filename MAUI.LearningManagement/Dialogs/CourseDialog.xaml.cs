@@ -1,17 +1,19 @@
 using MAUI.LearningManagement.ViewModels;
+using LMS.Models;
 
 namespace MAUI.LearningManagement.Dialogs;
 
 public partial class CourseDialog : ContentPage
 {
-    public CourseDialog()
+    public CourseDialog(Course courseToEdit = null)
     {
         InitializeComponent();
+        BindingContext = new CourseDialogViewModel(courseToEdit);
     }
 
     private void SaveClicked(object sender, EventArgs e)
     {
-        (BindingContext as CourseDialogViewModel)?.AddCourse();
+        (BindingContext as CourseDialogViewModel)?.AddOrUpdateCourse();
         Shell.Current.GoToAsync("//CourseManagement");
     }
 
@@ -22,6 +24,6 @@ public partial class CourseDialog : ContentPage
 
     private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
     {
-        BindingContext = new CourseDialogViewModel();
+
     }
 }
