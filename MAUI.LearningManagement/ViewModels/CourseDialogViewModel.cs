@@ -30,7 +30,6 @@ namespace MAUI.LearningManagement.ViewModels
             get { return course?.Description ?? string.Empty; }
             set
             {
-
                 course.Description = value;
             }
         }

@@ -27,6 +27,18 @@
             <Label Text="Description" Grid.Row="2" Grid.Column="0" />
             <Entry Text="{Binding Description}" Grid.Row="2" Grid.Column="1" />
         </Grid>
+        <!--STUDENT ROSTER-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Not Enrolled" Grid.Column="0" />
+            <Label Text="Buttons" Grid.Column="1" />
+            <Label Text="Enrolled" Grid.Column="2" />
+        </Grid>
+
         <Button Text="Save" Clicked="SaveClicked" />
         <Button Text="Cancel" Clicked="CancelClicked" />
     </VerticalStackLayout>
