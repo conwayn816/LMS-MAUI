@@ -20,7 +20,20 @@ public partial class CourseManagementView : ContentPage
 
     private void ViewSelectedCourseClicked(object sender, EventArgs e)
     {
-        
+        var viewModel = BindingContext as CourseManagementViewViewModel;
+        if (viewModel != null)
+        {
+            var selectedCourse = viewModel.SelectedCourse;
+            if (selectedCourse != null)
+            {
+                var courseDetailedView = new CourseDetailedView(selectedCourse);
+                Shell.Current.Navigation.PushAsync(courseDetailedView);
+            }
+            else
+            {
+                DisplayAlert("Error", "Please select a course to view", "OK");
+            }
+        }
     }
 
     private void EditCourseClicked(object sender, EventArgs e)

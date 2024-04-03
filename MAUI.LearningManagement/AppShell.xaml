@@ -38,6 +38,10 @@
         Title="Course Dialog"
         ContentTemplate="{DataTemplate dialogs:CourseDialog}"
         Route="CourseAddUpdate"/>
+    <ShellContent
+        Title="Course Details"
+        ContentTemplate="{DataTemplate views:CourseDetailedView}"
+        Route="CourseDetails"/>
     
 
 </Shell>

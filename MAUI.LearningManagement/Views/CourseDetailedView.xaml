@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.LearningManagement.Views.CourseDetailedView"
+             Title="CourseDetailedView"
+             NavigatedTo="ContentPage_NavigatedTo"
+             >
+
+    <VerticalStackLayout Spacing="10">
+        <Label Text="Course Details" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center"/>
+         <StackLayout>
+            <Label Text="{Binding Code}" FontSize="Title"/>
+            <Label Text="{Binding Name}" />
+            <Label Text="{Binding Description}" />
+        </StackLayout>
+        <Button Text="Go Back" Clicked="GoBackClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>
