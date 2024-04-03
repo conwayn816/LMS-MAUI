@@ -30,7 +30,10 @@ namespace LMS.Services
         private CourseService()
         {
             query = string.Empty;
-            courses = new List<Course>();
+            courses = new List<Course>() {
+                new Course { Code = "CS101", Name = "Intro to Computer Science", Description = "An introduction to computer science" },
+                new Course { Code = "CS102", Name = "Advanced Computer Science", Description = "An advanced course in computer science" },
+            };
         }
 
         //returns list of courses (uses query if applicable)
@@ -67,6 +70,15 @@ namespace LMS.Services
             {
                 var index = courses.IndexOf(existingCourse);
                 courses[index] = course;
+            }
+        }
+
+        public void AddStudentToCourse(Course course, Student student)
+        {
+            var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
+            if (existingCourse != null)
+            {
+                existingCourse.Roster.Add(student);
             }
         }
 
