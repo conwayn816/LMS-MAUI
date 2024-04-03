@@ -24,6 +24,16 @@ namespace MAUI.LearningManagement.ViewModels
         //COURSES
         private Course? course;
 
+        public Course? Course
+        {
+            get { return course; }
+            set
+            {
+                course = value;
+                NotifyPropertyChanged();
+            }
+        }
+
         public string Code
         {
             get { return course?.Code ?? string.Empty; }
@@ -56,7 +66,7 @@ namespace MAUI.LearningManagement.ViewModels
 
         public CourseDetailedViewViewModel(Course courseSelected)
         {
-            this.course = courseSelected;
+            this.Course = courseSelected;
         }
         
         public void Refresh()
