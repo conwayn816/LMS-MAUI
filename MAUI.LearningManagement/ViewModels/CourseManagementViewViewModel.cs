@@ -44,11 +44,29 @@ namespace MAUI.LearningManagement.ViewModels
             get; set;
         }
 
+        private string query;
+
+        public string Query
+        {
+            get { return query; }
+            set
+            {
+                query = value;
+                NotifyPropertyChanged(nameof(Courses));
+            }
+        }
+
         public ObservableCollection<Course> Courses
         {
             get
             {
-                return new ObservableCollection<Course>(courseSvc.Courses);
+                var filteredList = courseSvc
+                    .Courses
+                    .Where(
+                        c => c.Name.ToUpper().Contains(Query?.ToUpper() ?? string.Empty)
+                        || c.Description.ToUpper().Contains(Query?.ToUpper() ?? string.Empty)
+                        || c.Code.ToUpper().Contains(Query?.ToUpper() ?? string.Empty)).ToList();
+                return new ObservableCollection<Course>(filteredList);
             }
         }
 

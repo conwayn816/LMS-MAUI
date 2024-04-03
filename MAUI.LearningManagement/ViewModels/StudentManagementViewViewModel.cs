@@ -44,8 +44,7 @@ namespace MAUI.LearningManagement.ViewModels
         {
             get
             {
-                var filteredList = StudentService
-                    .Current
+                var filteredList = studentSvc
                     .Students
                     .Where(
                         s => s.Name.ToUpper().Contains(Query?.ToUpper() ?? string.Empty)).ToList();

@@ -8,7 +8,7 @@
 
     <VerticalStackLayout Spacing="10">
         <Label Text="Welcome to Course Management" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center"/>
-
+        <SearchBar Text="{Binding Query, Mode=TwoWay}" Placeholder="Search Courses"/>
         <Label Text="Course List" VerticalOptions="Center" HorizontalOptions="Center"/>
         <ListView
             ItemsSource="{Binding Courses}"
