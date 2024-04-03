@@ -20,6 +20,14 @@ namespace MAUI.LearningManagement.ViewModels
             set { student.Name = value; }
         }
 
+        public string ClassificationString
+        {
+            get { return classificationString ?? string.Empty; }
+            set { classificationString = value; }
+        }
+
+        private string classificationString = string.Empty;
+
         public StudentDialogViewModel(Student studentToEdit = null)
         {
             this.student = studentToEdit ?? new Student();
@@ -29,8 +37,24 @@ namespace MAUI.LearningManagement.ViewModels
         {
             if (student != null)
             {
+                TranslateClassificationString();
                 StudentService.Current.AddOrUpdateStudent(student);
             }
         }
+
+        public void TranslateClassificationString()
+        {
+            if (student != null)
+            {
+                if (ClassificationString == "F")
+                    student.Classification = StudentClassifcation.Freshman;
+                else if (ClassificationString == "O")
+                    student.Classification = StudentClassifcation.Sophomore;
+                else if (ClassificationString == "J")
+                    student.Classification = StudentClassifcation.Junior;
+                else if (ClassificationString == "S")
+                    student.Classification = StudentClassifcation.Senior;
+            }
+        }   
     }
 }

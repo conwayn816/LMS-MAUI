@@ -24,6 +24,13 @@
             <Label Text="Name" Grid.Row="1" Grid.Column="0" />
             <Entry Text="{Binding Name}" Grid.Row="1" Grid.Column="1" />
         </Grid>
+        <StackLayout RadioButtonGroup.GroupName="Classifications"
+            RadioButtonGroup.SelectedValue="{Binding ClassificationString}">
+            <RadioButton Content="Freshman" Value="F" />
+            <RadioButton Content="Sophomore" Value="O" />
+            <RadioButton Content="Junior" Value="J" />
+            <RadioButton Content="Senior" Value="S" />
+        </StackLayout>
         <Button Text="Save" Clicked="SaveClicked" />
         <Button Text="Cancel" Clicked="CancelClicked" />
     </VerticalStackLayout>
