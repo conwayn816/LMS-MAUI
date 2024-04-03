@@ -42,6 +42,10 @@
         Title="Course Details"
         ContentTemplate="{DataTemplate views:CourseDetailedView}"
         Route="CourseDetails"/>
+    <ShellContent
+        Title="Enroll Student"
+        ContentTemplate="{DataTemplate dialogs:EnrollStudentDialog}"
+        Route="EnrollStudent"/>
     
 
 </Shell>
