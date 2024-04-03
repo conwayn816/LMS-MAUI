@@ -44,13 +44,30 @@ namespace MAUI.LearningManagement.ViewModels
         {
             get
             {
-                return new ObservableCollection<Student>(studentSvc.Students);
+                var filteredList = StudentService
+                    .Current
+                    .Students
+                    .Where(
+                        s => s.Name.ToUpper().Contains(Query?.ToUpper() ?? string.Empty)).ToList();
+                    return new ObservableCollection<Student>(filteredList);
             }
         }
 
         public Student? SelectedStudent
         {
             get; set;
+        }
+
+        private string query;
+
+        public string Query 
+        {
+            get { return query; }
+            set
+            {
+                query = value;
+                NotifyPropertyChanged(nameof(Students));
+            }
         }
 
         public void RemoveStudent()

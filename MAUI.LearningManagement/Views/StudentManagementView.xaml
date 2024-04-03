@@ -9,6 +9,7 @@
  <VerticalStackLayout Spacing="10">
         <Label Text="Welcome to Student Management" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center"/>
         <Label Text="Student List" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <SearchBar Text="{Binding Query, Mode=TwoWay}" Placeholder="Search Student" />
         <ListView
             ItemsSource="{Binding Students}"
             SelectedItem="{Binding SelectedStudent}">
