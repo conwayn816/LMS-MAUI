@@ -56,9 +56,18 @@ namespace LMS.Services
         }
 
         //takes in a Student from frontend and adds to list of Students
-        public void Add(Student student)
+        public void AddOrUpdateStudent(Student student)
         {
-            students.Add(student);
+            var existingStudent = students.FirstOrDefault(p => p.guid == student.guid);
+            if (existingStudent != null)
+            {
+                var index = students.IndexOf(existingStudent);
+                students[index] = student;
+            }
+            else
+            {
+                students.Add(student);
+            }
         }
 
         public void Remove(Student student)

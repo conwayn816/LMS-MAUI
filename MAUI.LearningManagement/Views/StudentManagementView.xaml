@@ -23,6 +23,7 @@
             </ListView.ItemTemplate>
         </ListView>
         <Button Text="Add Student" Clicked="AddStudentClicked" />
+        <Button Text="Edit Student" Clicked="EditStudentClicked" />
         <Button Text="Remove Student" Clicked="RemoveStudentClicked" />
         <Button Text="Go Back" Clicked="GoBackClicked" />
     </VerticalStackLayout>

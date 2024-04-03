@@ -2,6 +2,7 @@ namespace LMS.Models
 {
     public class Student
     {
+        public Guid guid { get; set;}
         public int Id { get; set; }
         public string Name { get; set; }
         public StudentClassifcation Classification { get; set; }
@@ -11,6 +12,7 @@ namespace LMS.Models
         {
             Name = "";
             Grades = new Dictionary<Guid, double>();
+            guid = Guid.NewGuid();
         }
 
         public override string ToString()

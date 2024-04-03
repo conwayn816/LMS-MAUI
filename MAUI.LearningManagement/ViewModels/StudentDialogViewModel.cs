@@ -10,34 +10,26 @@ namespace MAUI.LearningManagement.ViewModels
 
         public int Id
         {
-            get { return student?.Id ?? 0; }
-            set
-            {
-                if (student == null) student = new Student();
-                student.Id = value;
-            }
+            get { return student.Id; }
+            set { student.Id = value; }
         }
 
         public string Name
         {
-            get { return student?.Name ?? string.Empty; }
-            set
-            {
-                if (student == null) student = new Student();
-                student.Name = value;
-            }
+            get { return student.Name ?? string.Empty; }
+            set { student.Name = value; }
         }
 
-        public StudentDialogViewModel()
+        public StudentDialogViewModel(Student studentToEdit = null)
         {
-            student = new Student();
+            this.student = studentToEdit ?? new Student();
         }
 
-        public void AddStudent()
+        public void AddOrUpdateStudent()
         {
             if (student != null)
             {
-                StudentService.Current.Add(student);
+                StudentService.Current.AddOrUpdateStudent(student);
             }
         }
     }
