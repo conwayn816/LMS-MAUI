@@ -21,6 +21,7 @@ namespace MAUI.LearningManagement.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        //COURSES
         private Course? course;
 
         public string Code
@@ -36,6 +37,21 @@ namespace MAUI.LearningManagement.ViewModels
         public string Description
         {
             get { return course?.Description ?? string.Empty; }
+        }
+
+        public ObservableCollection<Student>? Roster
+        {
+            get { return new ObservableCollection<Student>(course.Roster); }
+        }
+
+        public ObservableCollection<Assignment>? Assignments
+        {
+            get { return new ObservableCollection<Assignment>(course.Assignments); }
+        }
+
+        public ObservableCollection<Module>? Modules
+        {
+            get { return new ObservableCollection<Module>(course.Modules); }
         }
 
         public CourseDetailedViewViewModel(Course courseSelected)

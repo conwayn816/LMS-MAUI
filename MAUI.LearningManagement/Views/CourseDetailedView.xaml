@@ -30,7 +30,7 @@
                 <ListView ItemsSource="{Binding Roster}" Grid.Column="0" Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Student.Name}" />
+                            <TextCell Text="{Binding Name}" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -38,7 +38,19 @@
                 <ListView ItemsSource="{Binding Modules}" Grid.Column="1" Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Module.Name}" Detail="{Binding ContentItems}" />
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="Module"/>
+                                    <Label Text="{Binding Name}" />
+                                    <ListView ItemsSource="{Binding ContentItems}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextCell Text="{Binding Name}" />
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackLayout>
+                            </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -46,7 +58,7 @@
                 <ListView ItemsSource="{Binding Assignments}" Grid.Column="2" Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Assignment.Name}" />
+                            <TextCell Text="{Binding Name}" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
