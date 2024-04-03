@@ -17,14 +17,9 @@ public partial class InstructorView : ContentPage
     }
 
     //STUDENTS
-    private void AddStudentClicked(object sender, EventArgs e)
+    private void StudentManagementClicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//StudentDetail");
-    }
-
-    private void RemoveStudentClicked(object sender, EventArgs e)
-    {
-        (BindingContext as InstructorViewViewModel)?.RemoveStudent();
+        Shell.Current.GoToAsync("//StudentManagement");
     }
 
     //COURSES

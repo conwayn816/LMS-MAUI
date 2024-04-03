@@ -8,22 +8,8 @@
 
 
     <VerticalStackLayout Spacing="10">
-        <Label Text="Student List" VerticalOptions="Center" HorizontalOptions="Center"/>
-        <ListView
-            ItemsSource="{Binding Students}"
-            SelectedItem="{Binding SelectedStudent}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding}" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <Button Text="Add Student" Clicked="AddStudentClicked" />
-        <Button Text="Remove Student" Clicked="RemoveStudentClicked" />
+        <Label Text="Welcome to the Instructor View" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Button Text="Student Management" Clicked="StudentManagementClicked" />
 
         <Label Text="Course List" VerticalOptions="Center" HorizontalOptions="Center"/>
         <ListView

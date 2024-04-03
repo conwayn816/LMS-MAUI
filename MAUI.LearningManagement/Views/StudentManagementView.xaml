@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.LearningManagement.Views.StudentManagementView"
+             Title="StudentManagementView"
+             NavigatedTo="ContentPage_NavigatedTo"
+             >
+
+ <VerticalStackLayout Spacing="10">
+        <Label Text="Welcome to Student Management" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label Text="Student List" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <ListView
+            ItemsSource="{Binding Students}"
+            SelectedItem="{Binding SelectedStudent}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add Student" Clicked="AddStudentClicked" />
+        <Button Text="Remove Student" Clicked="RemoveStudentClicked" />
+        <Button Text="Go Back" Clicked="GoBackClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>

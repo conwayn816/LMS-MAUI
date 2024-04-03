@@ -13,13 +13,13 @@ using LMS.Services;
 
 namespace MAUI.LearningManagement.ViewModels
 {
-    public class InstructorViewViewModel : INotifyPropertyChanged
+    public class StudentManagementViewViewModel : INotifyPropertyChanged
     {
-        public InstructorViewViewModel()
+        public StudentManagementViewViewModel()
         {
-            courseSvc = CourseService.Current;
+            studentSvc = StudentService.Current;
         }
-        private CourseService courseSvc;
+        private StudentService studentSvc;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -28,43 +28,44 @@ namespace MAUI.LearningManagement.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        //COURSES
-        private Course? Course;
 
-        public Course? course
+        //STUDENTS
+        private Student? Student;
+
+        public Student? student
         {
             get
             {
-                return Course;
+                return Student;
             }
         }
 
-        public Course? SelectedCourse
+        public ObservableCollection<Student> Students
+        {
+            get
+            {
+                return new ObservableCollection<Student>(studentSvc.Students);
+            }
+        }
+
+        public Student? SelectedStudent
         {
             get; set;
         }
 
-        public ObservableCollection<Course> Courses
+        public void RemoveStudent()
         {
-            get
-            {
-                return new ObservableCollection<Course>(courseSvc.Courses);
-            }
-        }
-
-        public void RemoveCourse()
-        {
-            if (SelectedCourse == null)
+            if (SelectedStudent == null)
             {
                 return;
             }
-            courseSvc.Remove(SelectedCourse);
+            studentSvc.Remove(SelectedStudent);
             Refresh();
         }
 
         public void Refresh()
         {
-            NotifyPropertyChanged(nameof(Courses));
-        }   
+            NotifyPropertyChanged(nameof(Students));
+        }
     }
 }
