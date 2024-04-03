@@ -10,7 +10,7 @@
         <Label Text="Welcome to the Instructor View" VerticalOptions="Center" HorizontalOptions="Center"/>
         <Button Text="Student Management" Clicked="StudentManagementClicked" />
         <Button Text="Course Management" Clicked="CourseManagementClicked" />
-        <Button Text="Go Back Home" Clicked="GoBackClicked" />
+        <Button Text="Go Back" Clicked="GoBackClicked" />
     </VerticalStackLayout>
 
 </ContentPage>

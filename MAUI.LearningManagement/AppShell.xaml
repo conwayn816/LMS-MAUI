@@ -31,11 +31,11 @@
         ContentTemplate="{DataTemplate views:StudentView}"
         Route="Student"/>
     <ShellContent
-        Title="Student Details"
+        Title="Student Dialog"
         ContentTemplate="{DataTemplate dialogs:StudentDialog}"
         Route="StudentDetail"/>
     <ShellContent
-        Title="Course Details"
+        Title="Course Dialog"
         ContentTemplate="{DataTemplate dialogs:CourseDialog}"
         Route="CourseDetail"/>
     

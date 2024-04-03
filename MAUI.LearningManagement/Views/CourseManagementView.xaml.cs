@@ -18,6 +18,11 @@ public partial class CourseManagementView : ContentPage
         await Shell.Current.Navigation.PushModalAsync(courseDialog);
     }
 
+    private void ViewSelectedCourseClicked(object sender, EventArgs e)
+    {
+        
+    }
+
     private void EditCourseClicked(object sender, EventArgs e)
     {
         var viewModel = BindingContext as CourseManagementViewViewModel;
