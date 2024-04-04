@@ -39,10 +39,8 @@ namespace MAUI.LearningManagement.ViewModels
             studentSvc = StudentService.Current;
         }
 
-        public static Course CurrentCourse
-        {
-            get; set;
-        }
+        public static Course CurrentCourse { get; set; }
+
 
         public ObservableCollection<Student> Roster
         {

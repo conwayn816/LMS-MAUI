@@ -17,6 +17,7 @@ namespace MAUI.LearningManagement.ViewModels
     {
         public CourseManagementViewViewModel()
         {
+            query = string.Empty;
             courseSvc = CourseService.Current;
         }
         private CourseService courseSvc;

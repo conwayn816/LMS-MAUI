@@ -41,21 +41,8 @@ namespace LMS.Services
         {
             get
             {
-            
-                return courses.Where(
-                    c =>
-                        c.Code.Contains(query ?? string.Empty, StringComparison.CurrentCultureIgnoreCase)
-                        || c.Name.Contains(query ?? string.Empty, StringComparison.CurrentCultureIgnoreCase)
-                        || c.Description.Contains(query ?? string.Empty, StringComparison.CurrentCultureIgnoreCase)).ToList();
-            
+                return courses.ToList();
             }
-        }
-
-        //searches for a course by name
-        public IList<Course> Search(string query)
-        {
-            this.query = query;
-            return Courses;
         }
 
         //adds course from frontend to the list
