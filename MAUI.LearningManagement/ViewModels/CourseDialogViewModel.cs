@@ -12,7 +12,8 @@ namespace MAUI.LearningManagement.ViewModels
             get { return course?.Code ?? string.Empty; }
             set
             {
-                course.Code = value;
+                if (course != null)
+                    course.Code = value;
             }
         }
 
@@ -21,7 +22,8 @@ namespace MAUI.LearningManagement.ViewModels
             get { return course?.Name ?? string.Empty; }
             set
             {
-                course.Name = value;
+                if (course != null)
+                    course.Name = value;
             }
         }
 
@@ -30,11 +32,12 @@ namespace MAUI.LearningManagement.ViewModels
             get { return course?.Description ?? string.Empty; }
             set
             {
-                course.Description = value;
+                if (course != null)
+                    course.Description = value;
             }
         }
 
-        public CourseDialogViewModel(Course courseToEdit = null)
+        public CourseDialogViewModel(Course? courseToEdit = null)
         {
             this.course = courseToEdit ?? new Course();
         }
