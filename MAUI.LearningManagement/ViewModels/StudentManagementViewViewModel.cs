@@ -31,16 +31,6 @@ namespace MAUI.LearningManagement.ViewModels
 
 
         //STUDENTS
-        private Student? Student;
-
-        public Student? student
-        {
-            get
-            {
-                return Student;
-            }
-        }
-
         public ObservableCollection<Student> Students
         {
             get
