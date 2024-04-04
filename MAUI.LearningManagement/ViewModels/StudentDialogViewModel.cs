@@ -6,7 +6,7 @@ namespace MAUI.LearningManagement.ViewModels
 {
     public class StudentDialogViewModel
     {
-        private Student? student;
+        private Student student;
 
         public int Id
         {
