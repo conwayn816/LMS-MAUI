@@ -1,4 +1,4 @@
-using MAUI.LearningManagement.ViewModels;
+
 
 namespace MAUI.LearningManagement.Views;
 
@@ -8,7 +8,6 @@ public partial class InstructorView : ContentPage
     public InstructorView()
     {
         InitializeComponent();
-        BindingContext = new InstructorViewViewModel();
     }
 
     private void GoBackClicked(object sender, EventArgs e)
