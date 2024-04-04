@@ -8,12 +8,12 @@ public partial class CreateAssignmentDialog : ContentPage
     public CreateAssignmentDialog()
     {
         InitializeComponent();
-        //BindingContext = new CreateAssignmentDialogViewModel();
+        BindingContext = new CreateAssignmentDialogViewModel();
     }
 
     private void SaveClicked(object sender, EventArgs e)
     {
-        // (BindingContext as CreateAssignmentDialogViewModel)?.SaveAssignment();
+        (BindingContext as CreateAssignmentDialogViewModel)?.SaveAssignment();
         Shell.Current.GoToAsync("//CourseManagement");
     }
 

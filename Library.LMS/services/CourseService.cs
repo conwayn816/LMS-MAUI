@@ -60,6 +60,22 @@ namespace LMS.Services
             }
         }
 
+        //adds assignment to course
+        public void AddAssignmentToCourse(Course course, Assignment assignment)
+        {
+            var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
+            if (existingCourse != null)
+            {
+                if (existingCourse.Assignments.Contains(assignment))
+                {
+                    return;
+                }
+                else{
+                    existingCourse.Assignments.Add(assignment);
+                }
+            }
+        }
+
         public void AddStudentToCourse(Course course, Student student)
         {
             var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);

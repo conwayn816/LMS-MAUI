@@ -103,7 +103,7 @@ namespace MAUI.LearningManagement.ViewModels
             }
             else
             {
-                //CreateAssignmentDialogViewModel.CurrentCourse = Course;
+                CreateAssignmentDialogViewModel.CurrentCourse = Course;
                 try
                 {
                     await Shell.Current.GoToAsync("//CreateAssignment");
