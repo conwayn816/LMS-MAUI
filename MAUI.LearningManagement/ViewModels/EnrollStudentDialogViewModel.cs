@@ -70,6 +70,7 @@ namespace MAUI.LearningManagement.ViewModels
             if (selectedStudent != null)
             {
                 courseSvc.AddStudentToCourse(CurrentCourse, selectedStudent);
+                selectedStudent = null;
                 NotifyPropertyChanged(nameof(Students));
                 NotifyPropertyChanged(nameof(Roster));
             }

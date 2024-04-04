@@ -10,6 +10,9 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
 
+        <Button Text="Save" Clicked="SaveClicked" />
+        <Button Text="Done" Clicked="DoneClicked" />
+
         <Label Text="Students Not Enrolled in Course" FontSize="Large" />
         <ListView 
             ItemsSource="{Binding Students}" 
@@ -30,8 +33,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-        <Button Text="Save" Clicked="SaveClicked" />
-        <Button Text="Done" Clicked="DoneClicked" />
     </VerticalStackLayout>
 </ContentPage>
