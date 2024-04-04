@@ -20,7 +20,7 @@ public partial class CourseDetailedView : ContentPage
 
     private void UnenrollClicked(object sender, EventArgs e)
     {
-
+        (BindingContext as CourseDetailedViewViewModel)?.UnenrollStudent();
     }
 
     private void CreateAssignmentClicked(object sender, EventArgs e)

@@ -88,6 +88,21 @@ namespace LMS.Services
             }
         }
 
+        public void RemoveStudentFromCourse(Course course, Student student)
+        {
+            var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
+            if (existingCourse != null)
+            {
+                if (existingCourse.Roster.Contains(student))
+                {
+                    existingCourse.Roster.Remove(student);
+                }
+                else{
+                    return;
+                }
+            }
+        }
+
         public void Remove(Course course)
         {
             courses.Remove(course);

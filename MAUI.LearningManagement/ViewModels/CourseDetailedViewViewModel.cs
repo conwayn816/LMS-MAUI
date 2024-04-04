@@ -55,6 +55,12 @@ namespace MAUI.LearningManagement.ViewModels
             get { return new ObservableCollection<Student>(course.Roster); }
         }
 
+        public Student? SelectedStudent
+        {
+            get; set;
+        }
+
+
         public ObservableCollection<Assignment>? Assignments
         {
             get { return new ObservableCollection<Assignment>(course.Assignments); }
@@ -92,6 +98,15 @@ namespace MAUI.LearningManagement.ViewModels
                     // Log or handle the exception
                     Console.WriteLine(ex.Message);
                 }
+            }
+        }
+
+        public void UnenrollStudent()
+        {
+            if (SelectedStudent != null)
+            {
+                CourseService.Current.RemoveStudentFromCourse(Course, SelectedStudent);
+                NotifyPropertyChanged(nameof(Roster));
             }
         }
 
