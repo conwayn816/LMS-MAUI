@@ -1,26 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using LMS.Models;
 using LMS.Services;
 namespace MAUI.LearningManagement.ViewModels
 {
-    public class CreateAssignmentDialogViewModel : INotifyPropertyChanged
+    public class CreateAssignmentDialogViewModel
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
         private Course course;
         private CourseService courseSvc;
 
@@ -76,8 +59,5 @@ namespace MAUI.LearningManagement.ViewModels
                 courseSvc.AddAssignmentToCourse(course, assignment);
             }
         }
-    
-
-
     }
 }
