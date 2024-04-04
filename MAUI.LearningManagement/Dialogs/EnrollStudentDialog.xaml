@@ -32,6 +32,6 @@
         </ListView>
         
         <Button Text="Save" Clicked="SaveClicked" />
-        <Button Text="Cancel" Clicked="CancelClicked" />
+        <Button Text="Done" Clicked="DoneClicked" />
     </VerticalStackLayout>
 </ContentPage>

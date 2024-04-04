@@ -13,7 +13,7 @@ namespace MAUI.LearningManagement.Dialogs
 
         private void ContentPage_NavigatedTo(object sender, EventArgs e)
         {
-            // Handle the NavigatedTo event
+            (BindingContext as EnrollStudentDialogViewModel)?.Refresh();
         }
 
         private void SaveClicked(object sender, EventArgs e)
@@ -21,7 +21,7 @@ namespace MAUI.LearningManagement.Dialogs
             (BindingContext as EnrollStudentDialogViewModel)?.EnrollStudent();
         }
 
-        private void CancelClicked(object sender, EventArgs e)
+        private void DoneClicked(object sender, EventArgs e)
         {
             Shell.Current.GoToAsync("//CourseManagement");
         }
