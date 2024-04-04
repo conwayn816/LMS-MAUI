@@ -52,7 +52,12 @@ namespace MAUI.LearningManagement.ViewModels
 
         public ObservableCollection<Student>? Roster
         {
-            get { return new ObservableCollection<Student>(course.Roster); }
+            get { 
+                if (course == null)
+                    return null;
+                else
+                    return new ObservableCollection<Student>(course.Roster); 
+            }
         }
 
         public Student? SelectedStudent
@@ -63,12 +68,22 @@ namespace MAUI.LearningManagement.ViewModels
 
         public ObservableCollection<Assignment>? Assignments
         {
-            get { return new ObservableCollection<Assignment>(course.Assignments); }
+            get { 
+                if (course != null)
+                    return new ObservableCollection<Assignment>(course.Assignments); 
+                else
+                    return null;
+            }
         }
 
         public ObservableCollection<Module>? Modules
         {
-            get { return new ObservableCollection<Module>(course.Modules); }
+            get { 
+                if (course == null)
+                    return null;
+                else
+                    return new ObservableCollection<Module>(course.Modules); 
+            }
         }
 
         public CourseDetailedViewViewModel(Course courseSelected)
@@ -105,8 +120,14 @@ namespace MAUI.LearningManagement.ViewModels
         {
             if (SelectedStudent != null)
             {
-                CourseService.Current.RemoveStudentFromCourse(Course, SelectedStudent);
-                NotifyPropertyChanged(nameof(Roster));
+                if (Course == null)
+                {
+                    return;
+                }
+                else{
+                    CourseService.Current.RemoveStudentFromCourse(Course, SelectedStudent);
+                    NotifyPropertyChanged(nameof(Roster));
+                }
             }
         }
 
