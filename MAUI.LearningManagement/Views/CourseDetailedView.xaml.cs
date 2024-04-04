@@ -25,7 +25,7 @@ public partial class CourseDetailedView : ContentPage
 
     private void CreateAssignmentClicked(object sender, EventArgs e)
     {
-
+        (BindingContext as CourseDetailedViewViewModel)?.OpenCreateAssignmentDialog();
     }
 
     private void CreateModuleClicked(object sender, EventArgs e)

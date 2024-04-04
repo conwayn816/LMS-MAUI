@@ -46,6 +46,11 @@
         Title="Enroll Student"
         ContentTemplate="{DataTemplate dialogs:EnrollStudentDialog}"
         Route="EnrollStudent"/>
+    <ShellContent
+        Title="Create Assignment"
+        ContentTemplate="{DataTemplate dialogs:CreateAssignmentDialog}"
+        Route="CreateAssignment"/>
+    
     
 
 </Shell>
