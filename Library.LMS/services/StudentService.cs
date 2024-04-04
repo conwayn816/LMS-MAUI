@@ -32,9 +32,7 @@ namespace LMS.Services
         {
             get
             {
-                return students.Where(
-                    p =>
-                        p.Name.Contains(query ?? string.Empty, StringComparison.OrdinalIgnoreCase)).ToList();
+                return students.ToList();
             }
         }
 
@@ -46,13 +44,6 @@ namespace LMS.Services
                 new Student{Name = "John Doe"},
                 new Student{Name = "Jane Doe"},
             };
-        }
-
-        //searches for a Student by name
-        public IList<Student> Search(string query)
-        {
-            this.query = query;
-            return Students;
         }
 
         //takes in a Student from frontend and adds to list of Students

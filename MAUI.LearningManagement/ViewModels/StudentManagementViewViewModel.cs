@@ -18,6 +18,7 @@ namespace MAUI.LearningManagement.ViewModels
         public StudentManagementViewViewModel()
         {
             studentSvc = StudentService.Current;
+            query = string.Empty;
         }
         private StudentService studentSvc;
 
