@@ -30,16 +30,6 @@ namespace MAUI.LearningManagement.ViewModels
         }
 
         //COURSES
-        private Course? Course;
-
-        public Course? course
-        {
-            get
-            {
-                return Course;
-            }
-        }
-
         public Course? SelectedCourse
         {
             get; set;
