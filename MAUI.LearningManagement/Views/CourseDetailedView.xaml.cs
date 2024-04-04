@@ -1,4 +1,5 @@
 using MAUI.LearningManagement.ViewModels;
+using MAUI.LearningManagement.Dialogs;
 using LMS.Models;
 
 namespace MAUI.LearningManagement.Views;
@@ -13,7 +14,8 @@ public partial class CourseDetailedView : ContentPage
 
     private void EnrollClicked(object sender, EventArgs e)
     {
-
+        // use the OpenEnrollStudentDialog to enroll a student
+        (BindingContext as CourseDetailedViewViewModel)?.OpenEnrollStudentDialog();
     }
 
     private void UnenrollClicked(object sender, EventArgs e)

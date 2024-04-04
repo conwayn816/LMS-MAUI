@@ -78,7 +78,13 @@ namespace LMS.Services
             var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
             if (existingCourse != null)
             {
-                existingCourse.Roster.Add(student);
+                if (existingCourse.Roster.Contains(student))
+                {
+                    return;
+                }
+                else{
+                    existingCourse.Roster.Add(student);
+                }
             }
         }
 

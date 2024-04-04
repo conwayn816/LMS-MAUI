@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using LMS.Models;
 using LMS.Services;
+using MAUI.LearningManagement.Dialogs;
 
 namespace MAUI.LearningManagement.ViewModels
 {
@@ -66,14 +67,39 @@ namespace MAUI.LearningManagement.ViewModels
 
         public CourseDetailedViewViewModel(Course courseSelected)
         {
+            if (courseSelected == null)
+            {
+                throw new ArgumentNullException(nameof(courseSelected));
+            }
             this.Course = courseSelected;
         }
-        
+
+        public async void OpenEnrollStudentDialog()
+        {
+            if (Course == null)
+            {
+                return;
+            }
+            else
+            {
+                EnrollStudentDialogViewModel.CurrentCourse = Course;
+                try
+                {
+                    await Shell.Current.GoToAsync("//EnrollStudent");
+                }
+                catch (Exception ex)
+                {
+                    // Log or handle the exception
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
         public void Refresh()
         {
-            NotifyPropertyChanged(nameof(course));  
+            NotifyPropertyChanged(nameof(course));
         }
-            
-        
+
+
     }
 }

@@ -2,16 +2,24 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI.LearningManagement.Dialogs.EnrollStudentDialog"
-             Title="Enroll Student in Course"
+             Title="EnrollStudent"
              NavigatedTo="ContentPage_NavigatedTo">
     <VerticalStackLayout Padding="10">
         <Label Text="Choose Student to Add to Course" 
             FontSize="Title" 
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
-
         
-        
+        <ListView 
+            ItemsSource="{Binding Students}" 
+            SelectedItem="{Binding SelectedStudent}" 
+            SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         
         <Button Text="Save" Clicked="SaveClicked" />
         <Button Text="Cancel" Clicked="CancelClicked" />

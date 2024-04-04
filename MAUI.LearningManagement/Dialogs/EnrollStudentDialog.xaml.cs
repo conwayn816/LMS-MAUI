@@ -1,30 +1,29 @@
 using MAUI.LearningManagement.ViewModels;
 using LMS.Models;
 
-namespace MAUI.LearningManagement.Dialogs;
-
-public partial class EnrollStudentDialog : ContentPage
+namespace MAUI.LearningManagement.Dialogs
 {
-    public EnrollStudentDialog(Course courseToEnroll)
+    public partial class EnrollStudentDialog : ContentPage
     {
-        InitializeComponent();
-        BindingContext = new EnrollStudentDialogViewModel(courseToEnroll);
-    }
+        public EnrollStudentDialog()
+        {
+            InitializeComponent();
+            BindingContext = new EnrollStudentDialogViewModel();
+        }
 
-    private void SaveClicked(object sender, EventArgs e)
-    {
-        (BindingContext as EnrollStudentDialogViewModel)?.AddToRoster();
-        Shell.Current.GoToAsync("..");
-    }
+        private void ContentPage_NavigatedTo(object sender, EventArgs e)
+        {
+            // Handle the NavigatedTo event
+        }
 
-    private void CancelClicked(object sender, EventArgs e)
-    {
-        Shell.Current.GoToAsync("..");
-    }
+        private void SaveClicked(object sender, EventArgs e)
+        {
+            (BindingContext as EnrollStudentDialogViewModel)?.EnrollStudent();
+        }
 
-    private void ContentPage_NavigatedTo(object sender, NavigationEventArgs e)
-    {
-        (BindingContext as EnrollStudentDialogViewModel)?.Refresh();
+        private void CancelClicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync("//CourseManagement");
+        }
     }
-
 }
