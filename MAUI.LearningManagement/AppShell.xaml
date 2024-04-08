@@ -58,6 +58,10 @@
         Title="Create Content Item"
         ContentTemplate="{DataTemplate dialogs:ContentItemDialog}"
         Route="CreateContentItem"/>
+    <ShellContent  
+        Title="Student Dashboard"
+        ContentTemplate="{DataTemplate views:StudentDashView}"
+        Route="StudentDashboard"/>
     
     
 

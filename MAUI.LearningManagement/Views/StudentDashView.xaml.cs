@@ -9,16 +9,6 @@ public partial class StudentDashView : ContentPage
         InitializeComponent();
     }
 
-    protected override void OnNavigatedTo(INavigationParameters parameters)
-    {
-        base.OnNavigatedTo(parameters);
-
-        if (parameters.ContainsKey("StudentId"))
-        {
-            var studentId = parameters.GetValue<Guid>("StudentId");
-            // Now you can use studentId to get the student's details
-        }
-    }
 
     private void GoBackClicked(object sender, EventArgs e)
     {

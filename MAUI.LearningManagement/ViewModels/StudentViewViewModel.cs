@@ -57,7 +57,8 @@ namespace MAUI.LearningManagement.ViewModels
         {
             if (SelectedStudent != null)
             {
-                Shell.Current.GoToAsync($"//StudentDashView?StudentId={SelectedStudent.guid}");
+                
+                Shell.Current.GoToAsync($"//StudentDashboard");
             }
         }
 
