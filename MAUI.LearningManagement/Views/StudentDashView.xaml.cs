@@ -10,6 +10,11 @@ public partial class StudentDashView : ContentPage
         BindingContext = new StudentDashViewViewModel();
     }
 
+    public void GoToCourseClicked(object sender, EventArgs e)
+    {
+        
+    }
+
     private void GoBackClicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync("//Student");

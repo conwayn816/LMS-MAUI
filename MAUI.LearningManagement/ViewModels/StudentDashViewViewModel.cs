@@ -41,6 +41,8 @@ namespace MAUI.LearningManagement.ViewModels
             }
         }
 
+        public Course? SelectedCourse { get; set; }
+
         public void Refresh()
         {
             OnPropertyChanged(nameof(Courses));

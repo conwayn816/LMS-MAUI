@@ -6,6 +6,7 @@
              NavigatedTo="ContentPage_NavigatedTo">
     <VerticalStackLayout>
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
+        <Button Text="Go To Course" Clicked="GoToCourseClicked" />
         <Label Text="Your Courses" />
         <ListView ItemsSource="{Binding Courses}"
             SelectedItem="{Binding SelectedCourse}">
