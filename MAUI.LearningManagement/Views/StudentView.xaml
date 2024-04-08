@@ -7,6 +7,23 @@
 
     <VerticalStackLayout>
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
+        <Label Text="Who are you?" />
+        <SearchBar Text="{Binding Query, Mode=TwoWay}" Placeholder="Search Student" />
+        <ListView ItemsSource="{Binding Students}"
+            SelectedItem="{Binding SelectedStudent}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Login" Clicked="LoginClicked" />  
+
     </VerticalStackLayout>
 
 </ContentPage>
