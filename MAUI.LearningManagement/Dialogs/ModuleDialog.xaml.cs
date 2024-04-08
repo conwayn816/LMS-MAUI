@@ -10,6 +10,12 @@ namespace MAUI.LearningManagement.Dialogs
             BindingContext = new ModuleDialogViewModel();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            BindingContext = new ModuleDialogViewModel();
+        }
+
         private void SaveClicked(object sender, EventArgs e)
         {
             (BindingContext as ModuleDialogViewModel)?.SaveModule();
