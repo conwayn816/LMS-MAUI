@@ -6,7 +6,7 @@
              NavigatedTo="ContentPage_NavigatedTo"
              >
 
- <VerticalStackLayout Spacing="10">
+    <VerticalStackLayout Spacing="10">
         <Label Text="Welcome to Student Management" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center"/>
         <SearchBar Text="{Binding Query, Mode=TwoWay}" Placeholder="Search Student" />
         <Label Text="Student List" VerticalOptions="Center" HorizontalOptions="Center"/>
@@ -16,8 +16,15 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
+                        <StackLayout Orientation="Vertical">
                             <Label Text="{Binding}" />
+                            <ListView ItemsSource="{Binding StudentCourses}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextCell Text="{Binding}" />
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

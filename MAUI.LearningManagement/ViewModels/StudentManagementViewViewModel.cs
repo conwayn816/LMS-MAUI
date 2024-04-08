@@ -10,10 +10,12 @@ namespace MAUI.LearningManagement.ViewModels
     {
         public StudentManagementViewViewModel()
         {
+            courseSvc = CourseService.Current;
             studentSvc = StudentService.Current;
             query = string.Empty;
         }
         private StudentService studentSvc;
+        private CourseService courseSvc;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 

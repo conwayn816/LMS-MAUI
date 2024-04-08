@@ -1,3 +1,6 @@
+using LMS.Models;
+using LMS.Services;
+using System.Collections.ObjectModel;
 namespace LMS.Models
 {
     public class Student
@@ -13,6 +16,17 @@ namespace LMS.Models
             Name = "";
             Grades = new Dictionary<Guid, double>();
             guid = Guid.NewGuid();
+        }
+
+        //Student Courses
+        public ObservableCollection<Course> StudentCourses
+        {
+            get
+            {
+                var studentCourses = CourseService.Current.Courses
+                    .Where(c => c.Roster.Contains(this)).ToList();
+                return new ObservableCollection<Course>(studentCourses);
+            }
         }
 
         public override string ToString()
