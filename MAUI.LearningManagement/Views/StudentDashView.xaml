@@ -7,7 +7,6 @@
     <VerticalStackLayout>
         <Button Text="Go Back Home" Clicked="GoBackClicked" />
         <Label Text="Your Courses" />
-        <SearchBar Text="{Binding Query, Mode=TwoWay}" Placeholder="Search Courses" />
         <ListView ItemsSource="{Binding Courses}"
             SelectedItem="{Binding SelectedCourse}">
             <ListView.ItemTemplate>

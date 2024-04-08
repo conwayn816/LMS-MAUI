@@ -19,27 +19,11 @@ namespace MAUI.LearningManagement.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private string _query;
-
-        public string Query 
-        {
-            get => _query;
-            set
-            {
-                if (_query == value)
-                    return;
-
-                _query = value;
-                OnPropertyChanged();
-            }
-        }
-
         private CourseService courseSvc;
         private StudentService studentSvc;
 
         public StudentDashViewViewModel()
         {
-            _query = string.Empty;
             courseSvc = CourseService.Current;
             studentSvc = StudentService.Current;
         }
