@@ -1,5 +1,4 @@
 using MAUI.LearningManagement.ViewModels;
-using LMS.Models;
 
 namespace MAUI.LearningManagement.Dialogs;
 

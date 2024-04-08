@@ -50,6 +50,10 @@
         Title="Create Assignment"
         ContentTemplate="{DataTemplate dialogs:CreateAssignmentDialog}"
         Route="CreateAssignment"/>
+    <ShellContent
+        Title="Create Module"
+        ContentTemplate="{DataTemplate dialogs:ModuleDialog}"
+        Route="CreateModule"/>
     
     
 

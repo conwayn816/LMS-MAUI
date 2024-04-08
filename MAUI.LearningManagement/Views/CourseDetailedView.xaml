@@ -43,7 +43,6 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="Module"/>
                                     <Label Text="{Binding Name}" />
                                     <ListView ItemsSource="{Binding ContentItems}">
                                         <ListView.ItemTemplate>

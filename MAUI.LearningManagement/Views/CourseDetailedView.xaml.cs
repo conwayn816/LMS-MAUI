@@ -1,5 +1,4 @@
 using MAUI.LearningManagement.ViewModels;
-using MAUI.LearningManagement.Dialogs;
 using LMS.Models;
 
 namespace MAUI.LearningManagement.Views;
@@ -30,7 +29,7 @@ public partial class CourseDetailedView : ContentPage
 
     private void CreateModuleClicked(object sender, EventArgs e)
     {
-
+        (BindingContext as CourseDetailedViewViewModel)?.OpenModuleDialog();
     }
 
     private void CreateContentItemClicked(object sender, EventArgs e)
