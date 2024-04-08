@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.LearningManagement.Views.StudentDashView"
+             Title="StudentDashView">
+
+
+    <VerticalStackLayout>
+        <Button Text="Go Back Home" Clicked="GoBackClicked" />
+        <Label Text="Your Courses" />
+        <SearchBar Text="{Binding Query, Mode=TwoWay}" Placeholder="Search Courses" />
+        <ListView ItemsSource="{Binding Courses}"
+            SelectedItem="{Binding SelectedCourse}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+    </VerticalStackLayout>
+
+</ContentPage>

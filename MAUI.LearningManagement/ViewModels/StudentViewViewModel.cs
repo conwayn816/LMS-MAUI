@@ -53,6 +53,14 @@ namespace MAUI.LearningManagement.ViewModels
             }
         }
 
+        public void Login()
+        {
+            if (SelectedStudent != null)
+            {
+                Shell.Current.GoToAsync($"//StudentDashView?StudentId={SelectedStudent.guid}");
+            }
+        }
+
         public void Refresh()
         {
             NotifyPropertyChanged(nameof(Students));

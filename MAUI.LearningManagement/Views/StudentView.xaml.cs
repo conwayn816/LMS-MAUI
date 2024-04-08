@@ -12,7 +12,7 @@ public partial class StudentView : ContentPage
 
     private void LoginClicked(object sender, EventArgs e)
     {
-        
+        (BindingContext as StudentViewViewModel)?.Login();
     }
 
     private void GoBackClicked(object sender, EventArgs e)
