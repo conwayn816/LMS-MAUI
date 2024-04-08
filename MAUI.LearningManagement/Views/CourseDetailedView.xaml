@@ -44,7 +44,7 @@
                             <ViewCell>
                                 <StackLayout Orientation="Vertical">
                                     <Label Text="{Binding Name}" />
-                                    <ListView ItemsSource="{Binding ContentItems}">
+                                    <ListView ItemsSource="{Binding ContentItems}" SelectedItem="{Binding SelectedModule}">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <TextCell Text="{Binding Name}" />
