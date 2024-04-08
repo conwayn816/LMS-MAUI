@@ -57,7 +57,7 @@ namespace MAUI.LearningManagement.ViewModels
         {
             if (SelectedStudent != null)
             {
-                
+                StudentDashViewViewModel.CurrentStudent = SelectedStudent;
                 Shell.Current.GoToAsync($"//StudentDashboard");
             }
         }

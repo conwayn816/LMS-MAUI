@@ -20,5 +20,9 @@ public partial class StudentView : ContentPage
         Shell.Current.GoToAsync("//MainPage");
     }
 
+    private void ContentPage_NavigatedTo(object sender, EventArgs e)
+    {
+        (BindingContext as StudentViewViewModel)?.Refresh();
+    }
 }
 

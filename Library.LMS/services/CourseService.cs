@@ -115,14 +115,15 @@ namespace LMS.Services
         public void AddStudentToCourse(Course course, Student student)
         {
             var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
-            if (existingCourse != null)
+            var existingStudent = StudentService.Current.Students.FirstOrDefault(s => s.guid == student.guid);
+            if (existingCourse != null && existingStudent != null)
             {
-                if (existingCourse.Roster.Contains(student))
+                if (existingCourse.Roster.Contains(existingStudent))
                 {
                     return;
                 }
                 else{
-                    existingCourse.Roster.Add(student);
+                    existingCourse.Roster.Add(existingStudent);
                 }
             }
         }
