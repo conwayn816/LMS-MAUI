@@ -7,6 +7,11 @@ public partial class CreateAssignmentDialog : ContentPage
     public CreateAssignmentDialog()
     {
         InitializeComponent();
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
         BindingContext = new CreateAssignmentDialogViewModel();
     }
 
