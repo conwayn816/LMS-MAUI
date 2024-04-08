@@ -60,6 +60,26 @@ namespace LMS.Services
             }
         }
 
+        //add content item to module
+        public void AddContentItemToCourse(Course course, Module module, ContentItem contentItem)
+        {
+            var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
+            if (existingCourse != null)
+            {
+                var existingModule = existingCourse.Modules.FirstOrDefault(m => m.guid == module.guid);
+                if (existingModule != null)
+                {
+                    if (existingModule.Content.Contains(contentItem))
+                    {
+                        return;
+                    }
+                    else{
+                        existingModule.Content.Add(contentItem);
+                    }
+                }
+            }
+        }
+
         //adds module to course
         public void AddModuleToCourse(Course course, Module module)
         {

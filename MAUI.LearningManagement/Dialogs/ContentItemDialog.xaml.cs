@@ -9,9 +9,16 @@ namespace MAUI.LearningManagement.Dialogs
             InitializeComponent();
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            
+            base.OnAppearing();
+            BindingContext = new ContentItemDialogViewModel();
+        }
+
+        private void SaveClicked(object sender, EventArgs e)
+        {
+            (BindingContext as ContentItemDialogViewModel)?.SaveContentItem();
+            Shell.Current.GoToAsync("//CourseManagement");
         }
 
         private void CancelClicked(object sender, EventArgs e)
