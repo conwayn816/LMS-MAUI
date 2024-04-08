@@ -34,7 +34,7 @@ public partial class CourseDetailedView : ContentPage
 
     private void CreateContentItemClicked(object sender, EventArgs e)
     {
-
+        (BindingContext as CourseDetailedViewViewModel)?.OpenContentItemDialog();
     }
 
     private void GoBackClicked(object sender, EventArgs e)

@@ -2,24 +2,23 @@ using MAUI.LearningManagement.ViewModels;
 
 namespace MAUI.LearningManagement.Dialogs
 {
-    public partial class ModuleDialog : ContentPage
+    public partial class ContentItemDialog : ContentPage
     {
-        public ModuleDialog()
+        public ContentItemDialog()
         {
             InitializeComponent();
-            BindingContext = new ModuleDialogViewModel();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            BindingContext = new ModuleDialogViewModel();
+            BindingContext = new ContentItemDialogViewModel();
         }
 
         private void SaveClicked(object sender, EventArgs e)
         {
-            (BindingContext as ModuleDialogViewModel)?.SaveModule();
-            Shell.Current.GoToAsync($"//CourseManagement");
+            (BindingContext as ContentItemDialogViewModel)?.SaveContentItem();
+            Shell.Current.GoToAsync("//CourseManagement");
         }
 
         private void CancelClicked(object sender, EventArgs e)

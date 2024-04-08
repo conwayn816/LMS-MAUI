@@ -54,6 +54,10 @@
         Title="Create Module"
         ContentTemplate="{DataTemplate dialogs:ModuleDialog}"
         Route="CreateModule"/>
+    <ShellContent   
+        Title="Create Content Item"
+        ContentTemplate="{DataTemplate dialogs:ContentItemDialog}"
+        Route="CreateContentItem"/>
     
     
 

@@ -38,13 +38,16 @@
                     </ListView.ItemTemplate>
                 </ListView>
 
-                <ListView ItemsSource="{Binding Modules}" Grid.Column="1" Grid.Row="1">
+                <ListView ItemsSource="{Binding Modules}"
+                    SelectedItem="{Binding SelectedModule}" 
+                    Grid.Column="1" 
+                    Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Vertical">
                                     <Label Text="{Binding Name}" />
-                                    <ListView ItemsSource="{Binding ContentItems}">
+                                    <ListView ItemsSource="{Binding Content}">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <TextCell Text="{Binding Name}" />
