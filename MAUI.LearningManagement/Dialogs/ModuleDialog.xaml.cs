@@ -7,11 +7,13 @@ namespace MAUI.LearningManagement.Dialogs
         public ModuleDialog()
         {
             InitializeComponent();
+            BindingContext = new ModuleDialogViewModel();
         }
 
         private void SaveClicked(object sender, EventArgs e)
         {
-            // Handle the save button click event
+            (BindingContext as ModuleDialogViewModel)?.SaveModule();
+            Shell.Current.GoToAsync($"//CourseManagement");
         }
 
         private void CancelClicked(object sender, EventArgs e)

@@ -89,6 +89,27 @@ namespace MAUI.LearningManagement.ViewModels
             this.Course = courseSelected;
         }
 
+        public async void OpenModuleDialog()
+        {
+            if (Course == null)
+            {
+                return;
+            }
+            else
+            {
+                ModuleDialogViewModel.CurrentCourse = Course;
+                try
+                {
+                    await Shell.Current.GoToAsync("//CreateModule");
+                }
+                catch (Exception ex)
+                {
+                    // Log or handle the exception
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
         public async void OpenCreateAssignmentDialog()
         {
             if (Course == null)
