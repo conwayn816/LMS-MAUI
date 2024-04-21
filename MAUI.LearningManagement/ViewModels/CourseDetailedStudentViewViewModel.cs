@@ -45,6 +45,8 @@ namespace MAUI.LearningManagement.ViewModels
             }
         }
 
+        public Assignment? SelectedAssignment { get; set; }
+
         public ObservableCollection<Module>? Modules
         {
             get
@@ -61,16 +63,20 @@ namespace MAUI.LearningManagement.ViewModels
             
         }
 
-        public async void OpenSubmitAssignmentDialog()
+        public async void SubmitAssignment()
         {
-
+            if (SelectedAssignment != null)
+            {
+                SubmitAssignmentDialogViewModel.CurrentAssignment = SelectedAssignment;
+                SubmitAssignmentDialogViewModel.CurrentCourse = CurrentCourse;
+                SubmitAssignmentDialogViewModel.CurrentStudent = CurrentStudent;
+                await Shell.Current.GoToAsync("//SubmitAssignmentDialog");
+            }
         }
 
         public void Refresh()
         {
             NotifyPropertyChanged(nameof(CurrentCourse));
         }
-
-
     }
 }

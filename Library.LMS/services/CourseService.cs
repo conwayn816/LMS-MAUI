@@ -147,5 +147,25 @@ namespace LMS.Services
         {
             courses.Remove(course);
         }
+
+        public void SubmitAssignment(Course course, Assignment assignment, Submission submission)
+        {
+            var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
+            if (existingCourse != null)
+            {
+                var existingAssignment = existingCourse.Assignments.FirstOrDefault(a => a.guid == assignment.guid);
+                if (existingAssignment != null)
+                {
+                    var existingSubmission = existingAssignment.Submissions.FirstOrDefault(s => s.guid == submission.guid);
+                    if (existingSubmission != null)
+                    {
+                        return;
+                    }
+                    else{
+                        existingAssignment.Submissions.Add(submission);
+                    }
+                }
+            }
+        }
     }
 }

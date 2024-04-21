@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.LearningManagement.Dialogs.SubmitAssignmentDialog"
+             Title="Submit Assignment">
+    <VerticalStackLayout Padding="10">
+        <Label
+            Text="Submit Assignment"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+        <Label Text="{Binding Name}"/>
+        <Label Text="{Binding Description}" />
+        <Label Text="{Binding Points}" />
+        <Label Text="{Binding DueDate}"/>
+        <Entry Text="{Binding Content}" Placeholder="Submission" />
+
+        <Button Text="Save" Clicked="SaveClicked" />
+        <Button Text="Cancel" Clicked="CancelClicked" />
+    </VerticalStackLayout>
+</ContentPage>

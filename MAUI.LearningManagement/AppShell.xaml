@@ -66,6 +66,10 @@
         Title="Course Detailed Student"
         ContentTemplate="{DataTemplate views:CourseDetailedStudentView}"
         Route="CourseDetailedStudentView"/>
+    <ShellContent
+        Title="Submit Assignment"
+        ContentTemplate="{DataTemplate dialogs:SubmitAssignmentDialog}"
+        Route="SubmitAssignmentDialog"/>
     
     
     

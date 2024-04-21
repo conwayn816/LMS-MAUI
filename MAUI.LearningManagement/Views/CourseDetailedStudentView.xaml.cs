@@ -13,7 +13,7 @@ public partial class CourseDetailedStudentView : ContentPage
 
     private void SubmitAssignmentClicked(object sender, EventArgs e)
     {
-        
+        (BindingContext as CourseDetailedStudentViewViewModel)?.SubmitAssignment();
     }
 
     private void GoBackClicked(object sender, EventArgs e)
