@@ -46,5 +46,15 @@ namespace MAUI.LearningManagement.ViewModels
             OnPropertyChanged(nameof(Courses));
         }
 
+        public void GoToCourse()
+        {
+            if (SelectedCourse != null)
+            {
+                CourseDetailedStudentViewViewModel.CurrentCourse = SelectedCourse;
+                CourseDetailedStudentViewViewModel.CurrentStudent = CurrentStudent;
+                Shell.Current.GoToAsync($"//CourseDetailedStudentView");
+            }
+        }
+
     }
 }

@@ -62,6 +62,11 @@
         Title="Student Dashboard"
         ContentTemplate="{DataTemplate views:StudentDashView}"
         Route="StudentDashboard"/>
+    <ShellContent
+        Title="Course Detailed Student"
+        ContentTemplate="{DataTemplate views:CourseDetailedStudentView}"
+        Route="CourseDetailedStudentView"/>
+    
     
     
 

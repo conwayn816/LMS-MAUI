@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.LearningManagement.Views.CourseDetailedStudentView"
+             Title="CourseDetailedStudentView"
+             NavigatedTo="ContentPage_NavigatedTo"
+             >
+
+    <VerticalStackLayout Spacing="10">
+        <Label Text="Course Details" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center"/>
+         <StackLayout>
+            <Label Text="{Binding Code}" FontSize="Title"/>
+            <Label Text="{Binding Name}" />
+            <Label Text="{Binding Description}" />
+            <!--Grid for Roster, Modules, and Assignments-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Modules" Grid.Column="0" Grid.Row="0"/>
+                <Label Text="Assignments" Grid.Column="1" Grid.Row="0"/>
+
+                <ListView ItemsSource="{Binding Modules}"
+                    SelectedItem="{Binding SelectedModule}" 
+                    Grid.Column="0" 
+                    Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" />
+                                    <ListView ItemsSource="{Binding Content}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextCell Text="{Binding Name}" />
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <ListView ItemsSource="{Binding Assignments}" 
+                    SelectedItem="{Binding SelectedAssignment}"
+                    Grid.Column="1" 
+                    Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </StackLayout>
+        <Button Text="Submit Assignment" Clicked="SubmitAssignmentClicked" />
+        <Button Text="Go Back" Clicked="GoBackClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>
