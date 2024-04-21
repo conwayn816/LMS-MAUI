@@ -12,7 +12,7 @@ public partial class StudentDashView : ContentPage
 
     public void GoToCourseClicked(object sender, EventArgs e)
     {
-        
+        (BindingContext as StudentDashViewViewModel)?.GoToCourse();
     }
 
     private void GoBackClicked(object sender, EventArgs e)
