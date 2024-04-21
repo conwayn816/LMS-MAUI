@@ -20,12 +20,10 @@ namespace MAUI.LearningManagement.ViewModels
         }
 
         private CourseService courseSvc;
-        private StudentService studentSvc;
 
         public StudentDashViewViewModel()
         {
             courseSvc = CourseService.Current;
-            studentSvc = StudentService.Current;
         }
 
 
