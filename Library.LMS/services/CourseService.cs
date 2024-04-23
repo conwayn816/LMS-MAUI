@@ -31,7 +31,29 @@ namespace LMS.Services
         {
             query = string.Empty;
             courses = new List<Course>() {
-                new Course { Code = "CS101", Name = "Intro to Computer Science", Description = "An introduction to computer science" },
+                new Course { 
+                    Code = "CS101", Name = "Intro to Computer Science", Description = "An introduction to computer science",
+                    Modules = new List<Module> {
+                        new Module {
+                            Name = "Module 1", Description = "Module 1 description",
+                            Content = new List<ContentItem> {
+                                new ContentItem { Name = "Content 1", Description = "Content 1 description" },
+                                new ContentItem { Name = "Content 2", Description = "Content 2 description" },
+                            }
+                        },
+                        new Module {
+                            Name = "Module 2", Description = "Module 2 description",
+                            Content = new List<ContentItem> {
+                                new ContentItem { Name = "Content 3", Description = "Content 3 description" },
+                                new ContentItem { Name = "Content 4", Description = "Content 4 description" },
+                            }
+                        }
+                    },
+                    Assignments = new List<Assignment> {
+                        new Assignment { Name = "Assignment 1", Description = "Assignment 1 description" },
+                        new Assignment { Name = "Assignment 2", Description = "Assignment 2 description" },
+                    },
+                },
                 new Course { Code = "CS102", Name = "Advanced Computer Science", Description = "An advanced course in computer science" },
             };
         }
