@@ -60,7 +60,10 @@
                     </ListView.ItemTemplate>
                 </ListView>
 
-                <ListView ItemsSource="{Binding Assignments}" Grid.Column="2" Grid.Row="1">
+                <ListView ItemsSource="{Binding Assignments}" 
+                    SelectedItem="{Binding SelectedAssignment}"
+                    Grid.Column="2" 
+                    Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Name}" />
@@ -72,6 +75,7 @@
         <Button Text="Enroll Student" Clicked="EnrollClicked" />
         <Button Text="Unenroll Student" Clicked="UnenrollClicked" />
         <Button Text="Create Assignment" Clicked="CreateAssignmentClicked" />
+        <Button Text="View Assignment" Clicked="ViewAssignmentClicked" />
         <Button Text="Create Module" Clicked="CreateModuleClicked" />
         <Button Text="Create Content Item" Clicked="CreateContentItemClicked"/>
         <Button Text="Go Back" Clicked="GoBackClicked" />

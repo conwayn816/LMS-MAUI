@@ -37,6 +37,11 @@ public partial class CourseDetailedView : ContentPage
         (BindingContext as CourseDetailedViewViewModel)?.OpenContentItemDialog();
     }
 
+    private void ViewAssignmentClicked(object sender, EventArgs e)
+    {
+        (BindingContext as CourseDetailedViewViewModel)?.ViewAssignment();
+    }
+
     private void GoBackClicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync("//CourseManagement");
