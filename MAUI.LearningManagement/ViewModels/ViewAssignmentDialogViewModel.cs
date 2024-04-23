@@ -1,0 +1,56 @@
+using System.Collections.ObjectModel;
+using LMS.Models;
+using LMS.Services;
+namespace MAUI.LearningManagement.ViewModels
+{
+    public class ViewAssignmentDialogViewModel
+    {
+        private CourseService courseSvc;
+
+        public ViewAssignmentDialogViewModel()
+        {
+            courseSvc = CourseService.Current;
+
+        }
+        public static Assignment? CurrentAssignment { get; set; }
+        public static Course? CurrentCourse { get; set; }
+
+        public string Name
+        {
+            get { return CurrentAssignment?.Name ?? string.Empty; }
+        }
+
+        public string Description
+        {
+            get { return CurrentAssignment?.Description ?? string.Empty; }
+        }
+
+        public string DueDate
+        {
+            get { return CurrentAssignment?.DueDate.ToString() ?? string.Empty; }
+        }
+
+        public string Points
+        {
+            get { return CurrentAssignment?.TotalAvailablePoints.ToString() ?? string.Empty; }
+        }
+
+        public ObservableCollection<Submission>? Submissions
+        {
+            get
+            {
+                if (CurrentAssignment == null)
+                    return null;
+                else
+                    return new ObservableCollection<Submission>(CurrentAssignment.Submissions);
+            }
+        }
+
+        public Submission? SelectedSubmission { get; set; }
+
+        public void GradeAssignment()
+        {
+
+        }
+    }
+}
