@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.LearningManagement.Dialogs.ViewAssignmentDialog"
+             Title="View Assignment"
+             NavigatedTo="ContentPage_NavigatedTo">
+    <VerticalStackLayout Padding="10">
+        <Label
+            Text="View Assignment"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        
+        <Label Text="Name" /> 
+        <Label Text="{Binding Name}" />
+        <Label Text="Description" />
+        <Label Text="{Binding Description}" />
+        <Label Text="Due Date" />
+        <Label Text="{Binding DueDate}" />
+        <Label Text="Points" />
+        <Label Text="{Binding Points}" />
+
+        <Label Text="Submissions" />
+        <ListView ItemsSource="{Binding Submissions}"
+            SelectedItem= "{Binding SelectedSubmission}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Student Guid: " />
+                            <Label Text="{Binding studentGuid}" />
+                            <Label Text=" Current Points: " />
+                            <Label Text="{Binding Points}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Grade" Clicked="GradeClicked" />
+        <Button Text="Go Back" Clicked="GoBackClicked" />
+    </VerticalStackLayout>
+</ContentPage>

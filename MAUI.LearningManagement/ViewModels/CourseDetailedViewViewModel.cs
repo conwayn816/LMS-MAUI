@@ -64,6 +64,10 @@ namespace MAUI.LearningManagement.ViewModels
             get; set;
         }
 
+        public Assignment? SelectedAssignment
+        {
+            get; set;
+        }
 
         public ObservableCollection<Assignment>? Assignments
         {
@@ -92,6 +96,28 @@ namespace MAUI.LearningManagement.ViewModels
                 throw new ArgumentNullException(nameof(courseSelected));
             }
             this.Course = courseSelected;
+        }
+
+        public async void ViewAssignment()
+        {
+            if (SelectedAssignment == null)
+            {
+                return;
+            }
+            else
+            {
+                ViewAssignmentDialogViewModel.CurrentAssignment = SelectedAssignment;
+                ViewAssignmentDialogViewModel.CurrentCourse = Course;
+                try
+                {
+                    await Shell.Current.GoToAsync("//ViewAssignmentDialog");
+                }
+                catch (Exception ex)
+                {
+                    // Log or handle the exception
+                    Console.WriteLine(ex.Message);
+                }
+            }
         }
 
         public async void OpenContentItemDialog()

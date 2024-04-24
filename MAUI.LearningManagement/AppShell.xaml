@@ -70,6 +70,14 @@
         Title="Submit Assignment"
         ContentTemplate="{DataTemplate dialogs:SubmitAssignmentDialog}"
         Route="SubmitAssignmentDialog"/>
+    <ShellContent
+        Title="View Assignment"
+        ContentTemplate="{DataTemplate dialogs:ViewAssignmentDialog}"
+        Route="ViewAssignmentDialog"/>
+    <ShellContent
+        Title="Grade Assignment"
+        ContentTemplate="{DataTemplate dialogs:GradeAssignmentDialog}"
+        Route="GradeAssignmentDialog"/>
     
     
     

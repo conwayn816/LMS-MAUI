@@ -50,7 +50,7 @@ namespace LMS.Services
                         }
                     },
                     Assignments = new List<Assignment> {
-                        new Assignment { Name = "Assignment 1", Description = "Assignment 1 description" },
+                        new Assignment { Name = "Assignment 1", Description = "Assignment 1 description", TotalAvailablePoints = 100},
                         new Assignment { Name = "Assignment 2", Description = "Assignment 2 description" },
                     },
                 },
@@ -185,6 +185,23 @@ namespace LMS.Services
                     }
                     else{
                         existingAssignment.Submissions.Add(submission);
+                    }
+                }
+            }
+        }
+
+        public void GradeAssignment(Course course, Assignment assignment, Submission submission, int grade)
+        {
+            var existingCourse = courses.FirstOrDefault(c => c.guid == course.guid);
+            if (existingCourse != null)
+            {
+                var existingAssignment = existingCourse.Assignments.FirstOrDefault(a => a.guid == assignment.guid);
+                if (existingAssignment != null)
+                {
+                    var existingSubmission = existingAssignment.Submissions.FirstOrDefault(s => s.guid == submission.guid);
+                    if (existingSubmission != null)
+                    {
+                        existingSubmission.Points = grade;
                     }
                 }
             }
