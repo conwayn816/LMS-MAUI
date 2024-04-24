@@ -19,4 +19,9 @@ public partial class ViewAssignmentDialog : ContentPage
     {
         Shell.Current.GoToAsync("//CourseManagement");
     }
+
+    private void ContentPage_NavigatedTo(object sender, EventArgs e)
+    {
+        (BindingContext as ViewAssignmentDialogViewModel)?.Refresh();
+    }
 }

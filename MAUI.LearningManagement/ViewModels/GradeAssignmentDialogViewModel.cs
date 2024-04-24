@@ -1,10 +1,28 @@
 using System.Collections.ObjectModel;
+using System.Runtime.CompilerServices;
+using System.ComponentModel;
 using LMS.Models;
 using LMS.Services;
 namespace MAUI.LearningManagement.ViewModels
 {
-    public class GradeAssignmentDialogViewModel
+    public class GradeAssignmentDialogViewModel : INotifyPropertyChanged
     {
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void Refresh()
+        {
+            NotifyPropertyChanged(nameof(AssignmentName));
+            NotifyPropertyChanged(nameof(StudentName));
+            NotifyPropertyChanged(nameof(Content));
+            NotifyPropertyChanged(nameof(Grade));
+        }
+
         private CourseService courseSvc;
         private StudentService studentSvc;
 

@@ -19,4 +19,9 @@ public partial class GradeAssignmentDialog : ContentPage
     {
         Shell.Current.GoToAsync($"//CourseManagement");
     }
+
+    private void ContentPage_NavigatedTo(object sender, NavigationEventArgs e)
+    {
+        (BindingContext as GradeAssignmentDialogViewModel)?.Refresh();
+    }
 }
