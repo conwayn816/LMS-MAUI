@@ -25,7 +25,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
+                            <Label Text="Student Guid" />
                             <Label Text="{Binding studentGuid}" />
+                            <Label Text="Current Points" />
                             <Label Text="{Binding Points}" />
                         </StackLayout>
                     </ViewCell>
