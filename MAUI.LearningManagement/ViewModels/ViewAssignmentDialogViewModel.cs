@@ -51,15 +51,11 @@ namespace MAUI.LearningManagement.ViewModels
 
         public void GradeAssignment()
         {
-            if (SelectedSubmission == null)
-                return;
-            else
+            if (SelectedSubmission != null)
             {
                 GradeAssignmentDialogViewModel.CurrentAssignment = CurrentAssignment;
                 GradeAssignmentDialogViewModel.CurrentCourse = CurrentCourse;
                 GradeAssignmentDialogViewModel.CurrentSubmission = SelectedSubmission;
-
-                Shell.Current.GoToAsync($"//GradeAssignmentDialog");
             }
         }
     }

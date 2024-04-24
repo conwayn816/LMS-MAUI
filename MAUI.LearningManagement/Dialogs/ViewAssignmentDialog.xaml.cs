@@ -13,7 +13,7 @@ public partial class ViewAssignmentDialog : ContentPage
     private void GradeClicked(object sender, EventArgs e)
     { 
         (BindingContext as ViewAssignmentDialogViewModel)?.GradeAssignment();
-        Shell.Current.GoToAsync("//CourseManagement");
+        Shell.Current.GoToAsync("//GradeAssignmentDialog");
     }
 
     private void GoBackClicked(object sender, EventArgs e)

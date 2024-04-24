@@ -22,13 +22,13 @@ namespace MAUI.LearningManagement.ViewModels
             get { return CurrentAssignment?.Name ?? string.Empty; }
         }
 
-        public string StudentName
-        {
-            get { 
-                var student = studentSvc.Students.Find(s => s.guid == CurrentSubmission?.studentGuid);
-                return student?.Name ?? string.Empty;
-            }
-        }
+       // public string StudentName
+        //{
+        //    get { 
+               // var student = studentSvc.Students.Find(s => s.guid == CurrentSubmission?.studentGuid);
+                //return student?.Name ?? string.Empty;
+        //    }
+       // }
 
         public string Content
         {
@@ -51,6 +51,7 @@ namespace MAUI.LearningManagement.ViewModels
 
         public void SaveGrade()
         {
+            
 
         }
     }
