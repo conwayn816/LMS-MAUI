@@ -19,7 +19,7 @@
         <Label Text="{Binding Content}" />
 
         <Label Text="Grade" />
-        <Entry Placeholder="Grade" x:Name="GradeEntry" />
+        <Entry Placeholder="Grade" x:Name="Grade" />
 
         <Button Text="Save" Clicked="SaveClicked" />
         <Button Text="Cancel" Clicked="CancelClicked" />
