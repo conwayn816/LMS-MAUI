@@ -9,7 +9,17 @@
             VerticalOptions="Center"
             HorizontalOptions="Center" />
 
-        
+        <Label Text="Assignment" />
+        <Label Text="{Binding AssignmentName}" />
+
+        <Label Text="Student" />
+        <Label Text="{Binding StudentName}" />
+
+        <Label Text="Content" />
+        <Label Text="{Binding Content}" />
+
+        <Label Text="Grade" />
+        <Entry Placeholder="Grade" x:Name="GradeEntry" />
 
         <Button Text="Save" Clicked="SaveClicked" />
         <Button Text="Cancel" Clicked="CancelClicked" />
