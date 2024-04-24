@@ -51,7 +51,7 @@ namespace MAUI.LearningManagement.ViewModels
 
         public void SaveGrade()
         {
-            //courseSvc.GradeAssignment(CurrentCourse, CurrentAssignment, CurrentSubmission, _grade);
+            courseSvc.GradeAssignment(CurrentCourse, CurrentAssignment, CurrentSubmission, _grade);
             Shell.Current.GoToAsync($"//CourseManagement");
         }
     }
