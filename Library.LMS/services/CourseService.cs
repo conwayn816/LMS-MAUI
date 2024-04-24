@@ -50,7 +50,7 @@ namespace LMS.Services
                         }
                     },
                     Assignments = new List<Assignment> {
-                        new Assignment { Name = "Assignment 1", Description = "Assignment 1 description" },
+                        new Assignment { Name = "Assignment 1", Description = "Assignment 1 description", TotalAvailablePoints = 100},
                         new Assignment { Name = "Assignment 2", Description = "Assignment 2 description" },
                     },
                 },

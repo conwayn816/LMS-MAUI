@@ -12,11 +12,12 @@ public partial class ViewAssignmentDialog : ContentPage
 
     private void GradeClicked(object sender, EventArgs e)
     { 
-        Shell.Current.GoToAsync("//CourseDashboard");
+        (BindingContext as ViewAssignmentDialogViewModel)?.GradeAssignment();
+        Shell.Current.GoToAsync("//CourseManagement");
     }
 
     private void GoBackClicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//CourseDashboard");
+        Shell.Current.GoToAsync("//CourseManagement");
     }
 }
