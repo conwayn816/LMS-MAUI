@@ -10,13 +10,13 @@
             HorizontalOptions="Center" />
         
         <Label Text="Name" /> 
-        <Entry Text="{Binding Name}" />
+        <Label Text="{Binding Name}" />
         <Label Text="Description" />
-        <Entry Text="{Binding Description}" />
+        <Lavel Text="{Binding Description}" />
         <Label Text="Due Date" />
-        <DatePicker Date="{Binding DueDate}" />
+        <Label Date="{Binding DueDate}" />
         <Label Text="Points" />
-        <Entry Text="{Binding Points}" />
+        <Label Text="{Binding Points}" />
 
         <Label Text="Submissions" />
         <ListView ItemsSource="{Binding Submissions}"
@@ -25,7 +25,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding StudentName}" />
+                            <Label Text="{Binding studentGuid}" />
                             <Label Text="{Binding Points}" />
                         </StackLayout>
                     </ViewCell>
@@ -34,6 +34,6 @@
         </ListView>
 
         <Button Text="Grade" Clicked="GradeClicked" />
-        <Button Text="Cancel" Clicked="CancelClicked" />
+        <Button Text="Go Back" Clicked="GoBackClicked" />
     </VerticalStackLayout>
 </ContentPage>

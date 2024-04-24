@@ -7,17 +7,16 @@ public partial class ViewAssignmentDialog : ContentPage
     public ViewAssignmentDialog()
     {
         InitializeComponent();
-
+        BindingContext = new ViewAssignmentDialogViewModel();
     }
 
     private void GradeClicked(object sender, EventArgs e)
-    {
-        
-        Shell.Current.GoToAsync("//CourseDetailedView");
+    { 
+        Shell.Current.GoToAsync("//CourseDashboard");
     }
 
-    private void CancelClicked(object sender, EventArgs e)
+    private void GoBackClicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//CourseDetailedView");
+        Shell.Current.GoToAsync("//CourseDashboard");
     }
 }

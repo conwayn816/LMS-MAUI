@@ -6,11 +6,12 @@ namespace MAUI.LearningManagement.ViewModels
     public class ViewAssignmentDialogViewModel
     {
         private CourseService courseSvc;
+        private StudentService studentSvc;
 
         public ViewAssignmentDialogViewModel()
         {
             courseSvc = CourseService.Current;
-
+            studentSvc = StudentService.Current;
         }
         public static Assignment? CurrentAssignment { get; set; }
         public static Course? CurrentCourse { get; set; }
